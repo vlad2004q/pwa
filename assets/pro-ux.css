@@ -1,0 +1,23 @@
+/* PRO 7.8: usability pass. Does not modify engineering calculations. */
+:root{color-scheme:dark}
+html{scroll-padding-top:24px;-webkit-text-size-adjust:100%}
+body{overflow-x:hidden}
+button,a,input,select,textarea{touch-action:manipulation}
+button,a,.btn{transition:background-color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+input,select,textarea{max-width:100%;min-width:0}
+.tablewrap,.table-wrap,.table-container{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+table{font-variant-numeric:tabular-nums}
+:is(.panel,.glass,.card,.result,.summary){min-width:0}
+:where(p,td,th,label,.notice){overflow-wrap:anywhere}
+:where(button,a,input,select,textarea):focus-visible{outline:2px solid var(--premium-accent,#f59e0b);outline-offset:2px}
+.pro77-launch{min-height:44px;min-width:112px}
+.pro77-panel{max-height:min(75vh,620px);overflow-y:auto;overscroll-behavior:contain}
+.pro77-themes button{min-height:48px}
+@media(max-width:720px){
+  .layout{min-width:0}
+  .tablewrap table,.table-wrap table{min-width:540px}
+  input,select,textarea{font-size:max(16px,1em)}
+  .pro77-launch{bottom:calc(10px + env(safe-area-inset-bottom));left:10px}
+  .pro77-panel{bottom:calc(66px + env(safe-area-inset-bottom));left:10px;width:calc(100vw - 20px)}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}

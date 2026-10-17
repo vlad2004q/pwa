@@ -16,3 +16,14 @@ console.log('PASS: navigation, registry, offline assets, workspace references');
 for (const app of ['finance','drywall']) { const html=read('apps/'+app+'/index.html'); assert(html.includes('desktop-responsive.css'), 'desktop stylesheet missing: '+app); assert(html.includes('pro-desktop pro-'+app),'desktop layout missing: '+app); assert(!html.includes('fonts.googleapis.com'), 'remote font dependency: '+app); }
 assert(read('sw.js').includes('./assets/desktop-responsive.css'),'PWA desktop css not cached');
 console.log('PASS: desktop layouts and offline stylesheet');
+
+for(const app of ['measure','tile','paint','plumbing','heat','floor','materials','electric','finance','drywall']){
+ const html=read('apps/'+app+'/index.html');
+ assert(html.includes('pro-ux.css'), 'UX stylesheet missing: '+app);
+ assert(html.includes('pro-premium.js'), 'shared settings missing: '+app);
+ assert(html.includes('../../index.html'), 'back link missing: '+app);
+}
+assert(read('index.html').includes('pro-ux.css'));
+assert(read('sw.js').includes('./assets/pro-ux.css'));
+assert(!read('assets/pro-elegance.js').includes('document.body.appendChild(toggle)'), 'duplicate animation toggle');
+console.log('PASS: all 10 apps, mobile UX styles, unified settings and offline cache');
