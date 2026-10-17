@@ -26,14 +26,22 @@
           8
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,14 кг/м²",
-        "packagingText": "УСЛОВИЯ ХРАНЕНИЯ И ТРАНСПОРТИРОВКИ",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.14,
         "rateMax": 1.14,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0002",
@@ -58,14 +66,22 @@
           10
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,14 кг/м²",
-        "packagingText": "сухом помещении на поддонах в оригинальной упаковке. Допуска-",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.14,
         "rateMax": 1.14,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0003",
@@ -90,14 +106,22 @@
           12
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,16 кг/м²",
-        "packagingText": "14 суток.",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.16,
         "rateMax": 1.16,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0004",
@@ -122,14 +146,22 @@
           14
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,16 кг/м²",
-        "packagingText": "выполнять через 6-8 часов, на полах — через 24 часа, цементными",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.16,
         "rateMax": 1.16,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0005",
@@ -154,14 +186,22 @@
           16
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,16 кг/м²",
-        "packagingText": "Рабочая нагрузка (окончательное затвердевание) — через 14",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.16,
         "rateMax": 1.16,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0006",
@@ -186,14 +226,22 @@
           18
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,16 кг/м²",
-        "packagingText": "Излишки материала и загрязнения должны удаляться по мере",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.16,
         "rateMax": 1.16,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0007",
@@ -218,14 +266,22 @@
           20
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,16 кг/м²",
-        "packagingText": "Рабочая нагрузка (окончательное затвердевание) — через 14",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.16,
         "rateMax": 1.16,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0008",
@@ -250,14 +306,22 @@
           22
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,12 кг/м²",
-        "packagingText": "STARLIKE CRYSTAL EVO, STARLIKE NATURA.",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.12,
         "rateMax": 1.12,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0009",
@@ -282,14 +346,22 @@
           24
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,24 кг/м²",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.24,
         "rateMax": 1.24,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0010",
@@ -314,14 +386,22 @@
           26
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,16 кг/ м²",
-        "packagingText": "можно выполнять через 2-3 часа цветными цементными зати-",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.16,
         "rateMax": 1.16,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0011",
@@ -346,14 +426,22 @@
           28
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,16 кг/м²",
-        "packagingText": "ВНИМАНИЕ!",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.16,
         "rateMax": 1.16,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0012",
@@ -378,14 +466,22 @@
           30
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,13 кг/м²",
-        "packagingText": "УСЛОВИЯ ХРАНЕНИЯ И ТРАНСПОРТИРОВКИ",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.13,
         "rateMax": 1.13,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0013",
@@ -410,14 +506,22 @@
           32
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,13 кг/ м²",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.13,
         "rateMax": 1.13,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0014",
@@ -442,14 +546,22 @@
           34
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,13 кг/м²",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.13,
         "rateMax": 1.13,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0015",
@@ -474,14 +586,22 @@
           36
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 0,7 кг/м²",
-        "packagingText": "",
+        "packagingText": "15 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 0.7,
         "rateMax": 0.7,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 15.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0016",
@@ -506,14 +626,22 @@
           38
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 0,93 кг/ м²",
-        "packagingText": "LITOCHROM STONE DECOR или цветными эпоксидными затироч-",
+        "packagingText": "20 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 0.93,
         "rateMax": 0.93,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0017",
@@ -538,14 +666,22 @@
           40
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 0,92 кг/ м²",
-        "packagingText": "можно выполнять через 24 часа цветными цементными затироч-",
+        "packagingText": "20 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 0.92,
         "rateMax": 0.92,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0018",
@@ -570,14 +706,22 @@
           42
         ],
         "consumptionText": "",
-        "packagingText": "Вертикальные и горизонтальные нагрузки на блоки — через 24",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0019",
@@ -601,15 +745,23 @@
         "sourcePages": [
           44
         ],
-        "consumptionText": "",
-        "packagingText": "Рабочая нагрузка (окончательное затвердевание) — через 7",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Расход клея 1,5–4 кг/м²",
+        "packagingText": "5 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.5,
+        "rateMax": 4,
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Норма из технической таблицы PDF; проверьте условия нанесения",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0020",
@@ -633,15 +785,23 @@
         "sourcePages": [
           46
         ],
-        "consumptionText": "",
-        "packagingText": "УСЛОВИЯ ХРАНЕНИЯ И ТРАНСПОРТИРОВКИ",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Расход клея 1,5–4 кг/м²",
+        "packagingText": "5 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.5,
+        "rateMax": 4,
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Норма из технической таблицы PDF; проверьте условия нанесения",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0021",
@@ -666,14 +826,22 @@
           48
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,7 кг/м²",
-        "packagingText": "ранее, чем через 24 часа после выдержки в помещении при темпера-",
+        "packagingText": "10 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.7,
         "rateMax": 1.7,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0022",
@@ -698,14 +866,22 @@
           50
         ],
         "consumptionText": "Расход клея при толщине слоя 1 мм 1,5 кг/ м²",
-        "packagingText": "Фасовка, кг",
+        "packagingText": "1 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.5,
         "rateMax": 1.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 1.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0023",
@@ -730,14 +906,22 @@
           62
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "5 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0024",
@@ -762,14 +946,22 @@
           64
         ],
         "consumptionText": "",
-        "packagingText": "Фасовка, кг                5           2,5          2          1",
+        "packagingText": "5 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0025",
@@ -794,14 +986,22 @@
           66
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "2 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 2.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0026",
@@ -826,14 +1026,22 @@
           68
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "2 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 2.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0027",
@@ -858,14 +1066,22 @@
           70
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "2 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 2.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0028",
@@ -890,14 +1106,22 @@
           72
         ],
         "consumptionText": "",
-        "packagingText": "Время полного набора прочности (рабочая нагрузка) 5 суток.",
+        "packagingText": "10 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0029",
@@ -929,7 +1153,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0030",
@@ -954,14 +1181,22 @@
           76
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "1 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 1.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0031",
@@ -993,7 +1228,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0032",
@@ -1018,14 +1256,22 @@
           82
         ],
         "consumptionText": "",
-        "packagingText": "свет.",
+        "packagingText": "0.4 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 0.4,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0033",
@@ -1050,14 +1296,22 @@
           84
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "2 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 2.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0034",
@@ -1082,14 +1336,22 @@
           86
         ],
         "consumptionText": "",
-        "packagingText": "Время ожидания перед началом       5–30 минут",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0035",
@@ -1114,14 +1376,22 @@
           88
         ],
         "consumptionText": "",
-        "packagingText": "Фасовка, кг               1",
+        "packagingText": "18 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 18.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0036",
@@ -1146,14 +1416,22 @@
           90
         ],
         "consumptionText": "",
-        "packagingText": "+40 °С. Складировать и хранить вдали от источника тепла.",
+        "packagingText": "0.28 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 0.28,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0037",
@@ -1185,7 +1463,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0038",
@@ -1209,15 +1490,23 @@
         "sourcePages": [
           102
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Расход на 2 слоя 0,55–1,5 кг/м²",
+        "packagingText": "17 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.55,
+        "rateMax": 1.5,
+        "packOptions": [
+          {
+            "amount": 17.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Норма из технической таблицы PDF; проверьте условия нанесения",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0039",
@@ -1241,15 +1530,23 @@
         "sourcePages": [
           104
         ],
-        "consumptionText": "",
-        "packagingText": "хранение при отрицательных температурах.",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Расход на 2 слоя 0,8–1,6 кг/м²; для бассейнов и SPA могут действовать другие требования",
+        "packagingText": "20 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.8,
+        "rateMax": 1.6,
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Норма из технической таблицы PDF; проверьте условия нанесения",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0040",
@@ -1274,14 +1571,22 @@
           106
         ],
         "consumptionText": "для бассейнов Расход при толщине слоя 1 мм 1,6 кг/м² ВРЕМЯ НАЧАЛА ЭКСПЛУАТАЦИИ Время высыхания одного слоя — 1-2 часа.",
-        "packagingText": "Фасовка, кг               2",
+        "packagingText": "20 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.6,
         "rateMax": 1.6,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0041",
@@ -1306,14 +1611,22 @@
           108
         ],
         "consumptionText": "ВРЕМЯ НАЧАЛА ЭКСПЛУАТАЦИИ Расход при толщине слоя 1 мм 1,7 кг/м² Время высыхания одного слоя 3-4 часа. Время начала обли- цовки 5 суток. Время полного набора",
-        "packagingText": "Фасовка, кг               2",
+        "packagingText": "24 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.7,
         "rateMax": 1.7,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 24.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0042",
@@ -1338,14 +1651,22 @@
           110
         ],
         "consumptionText": "и интенсивного высыхания. Расход при толщине слоя 1 мм 1,6 кг/м² Время использования",
-        "packagingText": "Компонент А — цемент М500 42,5 МПа, фракционированный",
+        "packagingText": "20 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.6,
         "rateMax": 1.6,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0043",
@@ -1370,14 +1691,22 @@
           112
         ],
         "consumptionText": "механическим способом или Расход при толщине слоя 1 мм 1,5 кг/м² шлифованием. Время использования",
-        "packagingText": "УСЛОВИЯ ХРАНЕНИЯ И ТРАНСПОРТИРОВКИ",
+        "packagingText": "20 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.5,
         "rateMax": 1.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0044",
@@ -1402,14 +1731,22 @@
           114
         ],
         "consumptionText": "",
-        "packagingText": "Фасовка, кг",
+        "packagingText": "5 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0045",
@@ -1441,7 +1778,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0046",
@@ -1473,7 +1813,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0047",
@@ -1505,7 +1848,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0048",
@@ -1537,7 +1883,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0049",
@@ -1569,7 +1918,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0050",
@@ -1601,7 +1953,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0051",
@@ -1626,14 +1981,22 @@
           132
         ],
         "consumptionText": "ние с помощью специальных Расход при толщине слоя 1 мм 1,8-2,0 кг/м² вибрационных машин. При большой площади стяжки необходимо предусмотреть устройство компенсаци",
-        "packagingText": "«холодный шов» адгезионное молоко из 1 части IDROKOL X20, 1",
+        "packagingText": "25 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.8,
         "rateMax": 2.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0052",
@@ -1657,15 +2020,23 @@
         "sourcePages": [
           134
         ],
-        "consumptionText": "",
-        "packagingText": "их появления при помощи воды. Высохшие излишки материала и",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Расход при толщине слоя 1 мм 2 кг/м²",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 2,
+        "rateMax": 2,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма из технической таблицы PDF; проверьте условия нанесения",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0053",
@@ -1690,14 +2061,22 @@
           136
         ],
         "consumptionText": "ПОЛА+ 20 °С. Расход при толщине слоя 1 мм 1,6 кг/м²",
-        "packagingText": "окружающей среды. При использовании в системе «теплый пол»",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.6,
         "rateMax": 1.6,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0054",
@@ -1722,14 +2101,22 @@
           138
         ],
         "consumptionText": "однородного раствора без Расход при толщине слоя 1 мм 1,7 кг/м² ДЛЯ комочков. Полученный раствор выдержать 5-10",
-        "packagingText": "валиком для лучшей растекаемости и удаления из него пузырьков",
+        "packagingText": "20 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.7,
         "rateMax": 1.7,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0055",
@@ -1754,14 +2141,22 @@
           140
         ],
         "consumptionText": "твор выдержать 5-10 минут Расход при толщине слоя 1 мм 1,7-1,8 кг/м² ПОЛА для дозревания. После повторного",
-        "packagingText": "воздуха. При необходимости следующий слой LITOLIV S50 NIVELIR",
+        "packagingText": "20 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.7,
         "rateMax": 1.8,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0056",
@@ -1785,15 +2180,23 @@
         "sourcePages": [
           146
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
+        "consumptionText": "Расход от 200 г/м² (от 0,2 кг/м²)",
+        "packagingText": "10 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.2,
         "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "minimum",
+      "rateReason": "В PDF указан минимальный расход «от»; верхняя граница неизвестна. Нельзя автоматически рассчитывать закупку по минимуму.",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0057",
@@ -1817,15 +2220,23 @@
         "sourcePages": [
           148
         ],
-        "consumptionText": "",
-        "packagingText": "нальные добавки, антисептические добавки.",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
+        "consumptionText": "Расход от 100 г/м² (от 0,1 кг/м²)",
+        "packagingText": "10 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.1,
         "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "minimum",
+      "rateReason": "В PDF указан минимальный расход «от»; верхняя граница неизвестна. Нельзя автоматически рассчитывать закупку по минимуму.",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0058",
@@ -1849,15 +2260,23 @@
         "sourcePages": [
           150
         ],
-        "consumptionText": "",
-        "packagingText": "Фасовка, кг                  10               5",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
+        "consumptionText": "Расход от 100 г/м² (от 0,1 кг/м²)",
+        "packagingText": "10 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.1,
         "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "minimum",
+      "rateReason": "В PDF указан минимальный расход «от»; верхняя граница неизвестна. Нельзя автоматически рассчитывать закупку по минимуму.",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0059",
@@ -1881,15 +2300,23 @@
         "sourcePages": [
           152
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
+        "consumptionText": "Расход от 100 г/м² (от 0,1 кг/м²)",
+        "packagingText": "10 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.1,
         "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "minimum",
+      "rateReason": "В PDF указан минимальный расход «от»; верхняя граница неизвестна. Нельзя автоматически рассчитывать закупку по минимуму.",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0060",
@@ -1913,15 +2340,23 @@
         "sourcePages": [
           154
         ],
-        "consumptionText": "",
-        "packagingText": "плиты",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
+        "consumptionText": "Расход от 100 г/м²; для концентрата проверьте разбавление",
+        "packagingText": "10 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.1,
         "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "minimum",
+      "rateReason": "В PDF указан минимальный расход «от»; верхняя граница неизвестна. Нельзя автоматически рассчитывать закупку по минимуму.",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0061",
@@ -1946,14 +2381,22 @@
           160
         ],
         "consumptionText": "условиях прямого воздей- Расход при толщине слоя 1 мм 1,3 кг/м² ствия солнечных лучей. Свежую штукатурку следует предохранять от слишком быстрого высыхания и",
-        "packagingText": "ОЧИСТКА ПОВЕРХНОСТИ",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.3,
         "rateMax": 1.3,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0062",
@@ -1978,14 +2421,22 @@
           162
         ],
         "consumptionText": "й) ОЧИСТКА ПОВЕРХНОСТИ Расход при толщине слоя 1 мм 1,8 кг/м² Излишки материала и загрязнения удалять по мере появления",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.8,
         "rateMax": 1.8,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0063",
@@ -2010,14 +2461,22 @@
           164
         ],
         "consumptionText": "работ, инструмент промыть Расход при толщине слоя 1 мм 1,5 кг/м² водой. Высохшие излишки материала и загрязнения возможно",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.5,
         "rateMax": 1.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0064",
@@ -2042,14 +2501,22 @@
           166
         ],
         "consumptionText": "+20 °С) — около 60 минут. Расход при толщине слоя 1 мм 1,6 кг/м² Рекомендуется замешивать только то количество раствора, которое Время использования",
-        "packagingText": "от слишком быстрого высыхания и воздействия неблагоприятных",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.6,
         "rateMax": 1.6,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0065",
@@ -2074,14 +2541,22 @@
           168
         ],
         "consumptionText": "работ, инструмент промыть Расход при толщине слоя 1 мм 1,6 кг/м² водой. Высохшие излишки материала и загрязнения возможно Время использования",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.6,
         "rateMax": 1.6,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0066",
@@ -2105,15 +2580,23 @@
         "sourcePages": [
           170
         ],
-        "consumptionText": "",
-        "packagingText": "УСЛОВИЯ ХРАНЕНИЯ И ТРАНСПОРТИРОВКИ",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Расход 7,5–8 кг/м² при толщине 10 мм (пересчитано на 1 мм)",
+        "packagingText": "30 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.75,
+        "rateMax": 0.8,
+        "packOptions": [
+          {
+            "amount": 30.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма из технической таблицы PDF; проверьте условия нанесения",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0067",
@@ -2137,15 +2620,23 @@
         "sourcePages": [
           172
         ],
-        "consumptionText": "",
-        "packagingText": "Время высыхания зависит от толщины слоя, температуры, влаж-",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Расход при толщине слоя 1 мм 1 кг/м²",
+        "packagingText": "20 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1,
+        "rateMax": 1,
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Проверено по тексту технической таблицы PDF; применимость зависит от условий"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма из технической таблицы PDF; проверьте условия нанесения",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0068",
@@ -2170,14 +2661,22 @@
           174
         ],
         "consumptionText": "ервичной прочности беречь Расход при толщине слоя 1 мм 1,3-1,4 кг/м² от осадков, сквозняков и прямых солнечных лучей.",
-        "packagingText": "УСЛОВИЯ ХРАНЕНИЯ И ТРАНСПОРТИРОВКА",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.3,
         "rateMax": 1.4,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0069",
@@ -2209,7 +2708,10 @@
         "rateMax": 1.6,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0070",
@@ -2234,14 +2736,22 @@
           182
         ],
         "consumptionText": "ня влажности отремонтиро- Расход при толщине слоя 1 мм 1,9 кг/м² ванную поверхность укрыть полиэтиленовой пленкой или влажной Время использования",
-        "packagingText": "Состав",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.9,
         "rateMax": 1.9,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0071",
@@ -2266,14 +2776,22 @@
           184
         ],
         "consumptionText": "РАНЕНИЯ И ТРАНСПОРТИРОВКИ Расход при толщине слоя 1 мм 2,0 кг/м² Бумажный мешок 25 кг – 6 месяцев с даты изготовления в сухом Время использования",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 2.0,
         "rateMax": 2.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0072",
@@ -2298,14 +2816,22 @@
           186
         ],
         "consumptionText": "ность укрыть изолирующими Расход при толщине слоя 1 мм 2,0 кг/м² материалами. Время использования",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 2.0,
         "rateMax": 2.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0073",
@@ -2330,14 +2856,22 @@
           188
         ],
         "consumptionText": "аспылять) чистой водой. В Расход при толщине слоя 1 мм 1,9 кг/м² жаркую сухую погоду время ухода увеличивается до 3 дней. Время использования",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.9,
         "rateMax": 1.9,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0074",
@@ -2362,14 +2896,22 @@
           190
         ],
         "consumptionText": "ность укрыть изолирующими Расход при толщине слоя 1 мм 1,9 кг/м² материалами. Время использования",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.9,
         "rateMax": 1.9,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0075",
@@ -2394,14 +2936,22 @@
           192
         ],
         "consumptionText": "ня влажности отремонтиро- Расход при толщине слоя 1 мм 2,0 кг/м² ванную поверхность укрыть полиэтиленовой пленкой или влажной Время использования",
-        "packagingText": "Состав",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 2.0,
         "rateMax": 2.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0076",
@@ -2426,14 +2976,22 @@
           194
         ],
         "consumptionText": "слояматериалами. Расход при толщине слоя 1 мм 2,0 кг/м² ВРЕМЯ НАЧАЛА ЭКСПЛУАТАЦИИ Время использования ок",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 2.0,
         "rateMax": 2.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0077",
@@ -2458,14 +3016,22 @@
           196
         ],
         "consumptionText": "ня влажности отремонтиро- Расход при толщине слоя 1 мм 2,0 кг/м² ванную поверхность укрыть полиэтиленовой пленкой или влажной Время использования",
-        "packagingText": "Состав",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 2.0,
         "rateMax": 2.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0078",
@@ -2490,14 +3056,22 @@
           198
         ],
         "consumptionText": "ания температуры и уровня Расход при толщине слоя 1 мм 2,0 кг/м² влажности отремонтированную поверхность укрыть изолирующими Время использования",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 2.0,
         "rateMax": 2.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0079",
@@ -2522,14 +3096,22 @@
           200
         ],
         "consumptionText": "3 дней. слоя Расход при толщине слоя 1 мм 2,0 кг/м² ВРЕМЯ НАЧАЛА ЭКСПЛУАТАЦИИ",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 2.0,
         "rateMax": 2.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0080",
@@ -2554,14 +3136,22 @@
           202
         ],
         "consumptionText": "тся следить за тем, чтобы Расход при толщине слоя 1 мм 1,9 кг/м²раствор LITORAPID FLUID полностью заполнил пространство между бетонным основанием, закладной де",
-        "packagingText": "удалить только механическим способом или шлифованием.",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.9,
         "rateMax": 1.9,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0081",
@@ -2586,14 +3176,22 @@
           204
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "1 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 1.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0082",
@@ -2618,14 +3216,22 @@
           206
         ],
         "consumptionText": "",
-        "packagingText": "Фасовка, кг                  2",
+        "packagingText": "2 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 2.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0083",
@@ -2650,14 +3256,22 @@
           212
         ],
         "consumptionText": "",
-        "packagingText": "ления в сухом помещении на поддонах в оригинальной упаковке",
+        "packagingText": "20 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0084",
@@ -2682,14 +3296,22 @@
           214
         ],
         "consumptionText": "",
-        "packagingText": "затем зубчатой стороной шпателя нанести гребенчатый клеевой",
+        "packagingText": "20 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0085",
@@ -2714,14 +3336,22 @@
           216
         ],
         "consumptionText": "",
-        "packagingText": "Состав",
+        "packagingText": "10 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0086",
@@ -2753,7 +3383,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0087",
@@ -2778,14 +3411,22 @@
           222
         ],
         "consumptionText": "",
-        "packagingText": "оригинальной закрытой упаковке. Допускается замораживание/",
+        "packagingText": "5 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0088",
@@ -2810,14 +3451,22 @@
           224
         ],
         "consumptionText": "",
-        "packagingText": "процесс повторить.",
+        "packagingText": "0.75 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 0.75,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0089",
@@ -2842,14 +3491,22 @@
           226
         ],
         "consumptionText": "",
-        "packagingText": "Поверхности готова к эксплуатации после полного удаления",
+        "packagingText": "0.5 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 0.5,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0090",
@@ -2874,14 +3531,22 @@
           228
         ],
         "consumptionText": "",
-        "packagingText": "Вышеуказанные рекомендации верны",
+        "packagingText": "1 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 1.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0091",
@@ -2906,14 +3571,22 @@
           230
         ],
         "consumptionText": "",
-        "packagingText": "Фасовка, кг                5          1           0,5",
+        "packagingText": "5 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0092",
@@ -2938,14 +3611,22 @@
           232
         ],
         "consumptionText": "",
-        "packagingText": "Фасовка, кг                1           0,5",
+        "packagingText": "1 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 1.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0093",
@@ -2977,7 +3658,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0094",
@@ -3009,7 +3693,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0095",
@@ -3034,14 +3721,22 @@
           244
         ],
         "consumptionText": "ва также возможно гребен- Расход 4,5-5,5 кг/м² чатым шпателем по всей поверхности теплоизоляционной плиты. Время использования",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 4.5,
         "rateMax": 5.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0096",
@@ -3066,14 +3761,22 @@
           246
         ],
         "consumptionText": "рхность утеплителя, затем Расход 4,5-5,5 кг/м² материал наносится полоской по периметру плиты и добавляется Время использования",
-        "packagingText": "В качестве базового штукатурного слоя: нанести на поверх-",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 4.5,
         "rateMax": 5.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0097",
@@ -3098,14 +3801,22 @@
           248
         ],
         "consumptionText": "75 циклов Расход 4,5–5,5 кг/м²Состав Цемент, фракционный песок, модифицирующие добавки. Температура эксплуатаци",
-        "packagingText": "Фасовка, кг",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 4.5,
         "rateMax": 5.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0098",
@@ -3130,14 +3841,22 @@
           250
         ],
         "consumptionText": "боткой не менее 72 часов. Расход 4,5–6,0 кг/м² Температура эксплуатац",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 4.5,
         "rateMax": 6.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0099",
@@ -3162,14 +3881,22 @@
           252
         ],
         "consumptionText": "",
-        "packagingText": "ВРЕМЯ НАЧАЛА ЭКСПЛУАТАЦИИ",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0100",
@@ -3194,14 +3921,22 @@
           254
         ],
         "consumptionText": "",
-        "packagingText": "ВРЕМЯ НАЧАЛА ЭКСПЛУАТАЦИИ",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0101",
@@ -3226,14 +3961,22 @@
           256
         ],
         "consumptionText": "рный слой структурировать Расход 1,0-3,5 кг/м2равномерными круговыми движениями с помощью пластиковой кельмы. Рабочие поверхности инструмента",
-        "packagingText": "других элементов фасада, визуально разделяющих фасад на части.",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.0,
         "rateMax": 3.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0102",
@@ -3258,14 +4001,22 @@
           258
         ],
         "consumptionText": "Повторное добавление воды Расход 1,0–3,5 кг/м² приводит к значительному снижению качественных параметров смеси и не допускается.",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.0,
         "rateMax": 3.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-litokol-0103",
@@ -3290,14 +4041,22 @@
           260
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0104",
@@ -3322,14 +4081,22 @@
           262
         ],
         "consumptionText": "",
-        "packagingText": "Колеровка",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0105",
@@ -3354,14 +4121,22 @@
           264
         ],
         "consumptionText": "",
-        "packagingText": "Вышеуказанная техническая информа",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0106",
@@ -3386,14 +4161,22 @@
           266
         ],
         "consumptionText": "",
-        "packagingText": "Вышеуказанная техническая информа",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0107",
@@ -3418,14 +4201,22 @@
           268
         ],
         "consumptionText": "",
-        "packagingText": "Фасовка, кг                  20",
+        "packagingText": "20 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0108",
@@ -3450,14 +4241,22 @@
           270
         ],
         "consumptionText": "",
-        "packagingText": "ОЧИСТКА ПОВЕРХНОСТИ",
+        "packagingText": "20 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0109",
@@ -3482,14 +4281,22 @@
           272
         ],
         "consumptionText": "",
-        "packagingText": "Фасовка, кг                  15",
+        "packagingText": "15 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 15.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0110",
@@ -3521,7 +4328,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0111",
@@ -3553,7 +4363,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0112",
@@ -3585,7 +4398,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0113",
@@ -3617,7 +4433,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0114",
@@ -3649,7 +4468,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0115",
@@ -3681,7 +4503,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0116",
@@ -3713,7 +4538,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-litokol-0117",
@@ -3745,7 +4573,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0118",
@@ -3791,7 +4622,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0119",
@@ -3816,12 +4650,12 @@
           7,
           8
         ],
-        "consumptionText": "",
+        "consumptionText": "Ориентировочный расход около 1,1 кг/м2",
         "packagingText": "ПРИМЕЧАНИЯ                                     Ведро 2 кг, 5 кг и 15 кг.",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.1,
+        "rateMax": 1.1,
         "packOptions": [
           {
             "amount": 2.0,
@@ -3836,8 +4670,11 @@
             "unit": "кг"
           }
         ],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0120",
@@ -3870,7 +4707,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0121",
@@ -3896,14 +4736,22 @@
           12
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0122",
@@ -3929,14 +4777,22 @@
           14
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0123",
@@ -3962,14 +4818,22 @@
           16
         ],
         "consumptionText": "",
-        "packagingText": "прещается! Плитки необходимо уложить и прижать до момента об-",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0124",
@@ -3995,14 +4859,22 @@
           18
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0125",
@@ -4028,14 +4900,22 @@
           20
         ],
         "consumptionText": "",
-        "packagingText": "ки и равномерно распределяется зубчатой теркой или шпателем.",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0126",
@@ -4061,14 +4941,22 @@
           22
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0127",
@@ -4101,7 +4989,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0128",
@@ -4127,14 +5018,26 @@
           26
         ],
         "consumptionText": "",
-        "packagingText": "акцию, поэтому во время работы следует защищать глаза и кожу.",
+        "packagingText": "5 кг; 25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0129",
@@ -4167,7 +5070,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0130",
@@ -4200,7 +5106,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0131",
@@ -4233,7 +5142,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0132",
@@ -4259,14 +5171,22 @@
           36
         ],
         "consumptionText": "и индивидуальных средств Расход: 3,0 – 5,0 кг/м2CERESITCF защиты – спецодежды (комбинезон), перчаток, защитных масок и очков. Ceresit CF",
-        "packagingText": "Работы по нанесению лаков следует выполнять согласно рекомен-",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 3.0,
         "rateMax": 5.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0133",
@@ -4292,14 +5212,22 @@
           38
         ],
         "consumptionText": "и индивидуальных средств Расход: 3,0- 5,0 кг/м2CERESITCF защиты – спецодежды (комбинезон), перчаток, защитных масок и очков. Ceresit CF",
-        "packagingText": "Работы по нанесению лаков следует выполнять согласно рекомен-",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 3.0,
         "rateMax": 5.0,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0134",
@@ -4324,15 +5252,23 @@
           39,
           40
         ],
-        "consumptionText": "",
-        "packagingText": "Выравнивающий слой следует защищать от слишком быстрого вы-",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Ориентировочный расход: около 2 кг/м2",
+        "packagingText": "25 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 2.0,
+        "rateMax": 2.0,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0135",
@@ -4374,7 +5310,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0136",
@@ -4400,14 +5339,30 @@
           50
         ],
         "consumptionText": "",
-        "packagingText": "Образующийся осадок не влияет на качество грунтовки.",
+        "packagingText": "1 кг; 2 кг; 5 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 1.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 2.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0137",
@@ -4445,7 +5400,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0138",
@@ -4471,14 +5429,30 @@
           54
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "1 кг; 5 кг; 10 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 1.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0139",
@@ -4532,7 +5506,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0140",
@@ -4558,14 +5535,22 @@
           58
         ],
         "consumptionText": "Ориентировочный расход: 1,5 - 1,8 кг/м2 на 1 мм толщи- техническим характеристикам, однако не имеет влияния на способ",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.5,
         "rateMax": 1.8,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0141",
@@ -4603,7 +5588,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0142",
@@ -4641,7 +5629,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0143",
@@ -4667,14 +5658,22 @@
           64
         ],
         "consumptionText": "цев с даты изготовле- Ориентировочный расход: 1,0-1,1 кг/м2 на 1 мм толщи- ния, указанной на упаковке. При хранении следует избегать резких",
-        "packagingText": "",
+        "packagingText": "20 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.0,
         "rateMax": 1.1,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0144",
@@ -4700,14 +5699,22 @@
           66
         ],
         "consumptionText": "оженная информация не Ориентировочный расход: 1,0-1,1 кг/м2 на 1 мм толщи- может служить основанием для безусловной ответственности про-",
-        "packagingText": "",
+        "packagingText": "15 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.0,
         "rateMax": 1.1,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 15.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0145",
@@ -4733,14 +5740,22 @@
           68
         ],
         "consumptionText": "Ориентировочный расход: 1,6 кг/м2 на 1 мм толщины",
-        "packagingText": "действующими нормативами в строительстве. При сомнении следу-",
+        "packagingText": "15 кг",
         "rateBasis": "per_mm",
         "rateUnit": "кг/м²",
         "rateMin": 1.6,
         "rateMax": 1.6,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 15.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0146",
@@ -4766,14 +5781,22 @@
           70
         ],
         "consumptionText": "",
-        "packagingText": "крому».                                                                  Пластиковые ведра 5 и",
+        "packagingText": "15 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 15.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0147",
@@ -4799,14 +5822,22 @@
           72
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0148",
@@ -4848,7 +5879,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0149",
@@ -4874,14 +5908,22 @@
           76
         ],
         "consumptionText": "",
-        "packagingText": "удаляется только механически. Если покрытие будет использовать-",
+        "packagingText": "24 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 24.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0150",
@@ -4919,7 +5961,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0151",
@@ -4957,7 +6002,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0152",
@@ -4983,14 +6031,26 @@
           82
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "2 кг; 25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 2.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0153",
@@ -5016,14 +6076,22 @@
           84
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0154",
@@ -5048,15 +6116,23 @@
           85,
           86
         ],
-        "consumptionText": "",
-        "packagingText": "после укладки Ceresit CD 21. Все вышеизложенные рекомендации",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Ориентировочный расход около 2,0 кг/м2",
+        "packagingText": "25 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 2.0,
+        "rateMax": 2.0,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0155",
@@ -5081,15 +6157,23 @@
           87,
           88
         ],
-        "consumptionText": "",
-        "packagingText": "нуты и снова перемешать смесь.                                                        Мешки 25",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Ориентировочный расход: около 1,5 кг/м2",
+        "packagingText": "25 кг",
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.5,
+        "rateMax": 1.5,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0156",
@@ -5115,14 +6199,22 @@
           90
         ],
         "consumptionText": "",
-        "packagingText": "ное количество чистой воды и перемешать при помощи низкообо-",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0157",
@@ -5148,14 +6240,26 @@
           96
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "7.5 кг; 15 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 7.5,
+            "unit": "кг"
+          },
+          {
+            "amount": 15.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0158",
@@ -5188,7 +6292,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0159",
@@ -5214,14 +6321,22 @@
           100
         ],
         "consumptionText": "Ориентировочный расход: 4,5 – 5,5 кг/м2 ТКП 45-3.02-113-2009, ТКП 45-3.02-114-2009 и ТК на устройство тепловой изоляции ограж",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 4.5,
         "rateMax": 5.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0160",
@@ -5247,14 +6362,22 @@
           102
         ],
         "consumptionText": "Ориентировочный расход: 5,0-5,5 кг/м2 вильность применения клеевой смеси Требования к проектированию и устройству ЛШСУ прив",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 5.0,
         "rateMax": 5.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0161",
@@ -5280,14 +6403,22 @@
           104
         ],
         "consumptionText": "",
-        "packagingText": "ся в одной плоскости. Ширина швов не должна превышать 2 мм.",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0162",
@@ -5313,14 +6444,22 @@
           106
         ],
         "consumptionText": "",
-        "packagingText": "85 2. Устройство армированного слоя.                                                        Мешки",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0163",
@@ -5346,14 +6485,22 @@
           108
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0164",
@@ -5386,7 +6533,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0165",
@@ -5412,14 +6562,22 @@
           112
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0166",
@@ -5445,14 +6603,22 @@
           114
         ],
         "consumptionText": "Ориентировочный расход: 1,25 – 1,35 кг/м2 на 1 мм тол- сти воздуха 60%. В других условиях время высыхания и потребле-",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "area",
         "rateUnit": "кг/м²",
         "rateMin": 1.25,
         "rateMax": 1.35,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0167",
@@ -5478,14 +6644,22 @@
           116
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0168",
@@ -5511,14 +6685,22 @@
           118
         ],
         "consumptionText": "",
-        "packagingText": "РЕКОМЕНДАЦИИ",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0169",
@@ -5544,14 +6726,22 @@
           120
         ],
         "consumptionText": "",
-        "packagingText": "РЕКОМЕНДАЦИИ",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0170",
@@ -5577,14 +6767,22 @@
           122
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0171",
@@ -5609,15 +6807,18 @@
           123,
           124
         ],
-        "consumptionText": "",
+        "consumptionText": "Ориентировочный расход: около 4,0 кг/м2",
         "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 4.0,
+        "rateMax": 4.0,
         "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0172",
@@ -5650,7 +6851,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0173",
@@ -5676,14 +6880,22 @@
           132
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0174",
@@ -5709,14 +6921,22 @@
           136
         ],
         "consumptionText": "через 3024 минчаса Ориентировочный расход: 0,2-0,3 л/м2 Canada Walnut Kongo Wenge Цве",
-        "packagingText": "",
+        "packagingText": "4.2 кг",
         "rateBasis": "area",
         "rateUnit": "л/м²",
         "rateMin": 0.2,
         "rateMax": 0.3,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 4.2,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0175",
@@ -5741,12 +6961,12 @@
           137,
           138
         ],
-        "consumptionText": "",
+        "consumptionText": "Ориентировочный расход: около 0,1 л/м2",
         "packagingText": "Пластиковые канистры 5 л (4,3 кг).",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
+        "rateBasis": "area",
+        "rateUnit": "л/м²",
+        "rateMin": 0.1,
+        "rateMax": 0.1,
         "packOptions": [
           {
             "amount": 5.0,
@@ -5757,8 +6977,11 @@
             "unit": "кг"
           }
         ],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0176",
@@ -5784,14 +7007,22 @@
           140
         ],
         "consumptionText": "",
-        "packagingText": "вертикальных и горизонтальных следов опалубки используется",
+        "packagingText": "20 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0177",
@@ -5817,14 +7048,22 @@
           144
         ],
         "consumptionText": "Ориентировочный расход: 0,7 – 1,5 л/м2 40_2017CERESITCT",
-        "packagingText": "",
+        "packagingText": "24 кг",
         "rateBasis": "area",
         "rateUnit": "л/м²",
         "rateMin": 0.7,
         "rateMax": 1.5,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 24.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0178",
@@ -5862,7 +7101,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0179",
@@ -5888,14 +7130,22 @@
           148
         ],
         "consumptionText": "ди фасада. Ориентировочный расход: 0,2-0,4 л/м2 (0,29-0,58 кг/м2) Для выявления возможных ошибок колеровки необходимо перед",
-        "packagingText": "ных лучей. Свежеокрашенные поверхности необходимо защищать",
+        "packagingText": "21.75 кг",
         "rateBasis": "area",
         "rateUnit": "л/м²",
         "rateMin": 0.2,
         "rateMax": 0.4,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 21.75,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0180",
@@ -5921,14 +7171,22 @@
           150
         ],
         "consumptionText": ", красителями и вяжу- Ориентировочный расход: 0,2-0,4 л/м2 (0,3-0,6 кг/м2) при щими. Частично использованную упаковку необходимо тщательно",
-        "packagingText": "",
+        "packagingText": "22.5 кг",
         "rateBasis": "area",
         "rateUnit": "л/м²",
         "rateMin": 0.2,
         "rateMax": 0.4,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 22.5,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-ceresit-0181",
@@ -5961,7 +7219,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-ceresit-0182",
@@ -5994,7 +7255,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0183",
@@ -6031,7 +7295,10 @@
           }
         ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0184",
@@ -6055,15 +7322,27 @@
         "sourcePages": [
           5
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,5 – 1,6 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "5 кг; 25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.5,
+        "rateMax": 1.6,
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0185",
@@ -6087,15 +7366,23 @@
         "sourcePages": [
           7
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,5 – 1,6 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.5,
+        "rateMax": 1.6,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0186",
@@ -6119,15 +7406,27 @@
         "sourcePages": [
           8
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,3 - 1,4 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "10 кг; 30 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.3,
+        "rateMax": 1.4,
+        "packOptions": [
+          {
+            "amount": 10.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 30.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0187",
@@ -6159,7 +7458,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0188",
@@ -6191,7 +7493,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0189",
@@ -6223,7 +7528,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "geometry",
+      "rateReason": "Расчёт по геометрии шва; требуется плотность смеси из паспорта",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0190",
@@ -6255,7 +7563,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0191",
@@ -6287,7 +7598,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0192",
@@ -6319,7 +7633,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0193",
@@ -6351,7 +7668,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0194",
@@ -6383,7 +7703,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0195",
@@ -6415,7 +7738,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0196",
@@ -6447,7 +7773,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0197",
@@ -6471,15 +7800,18 @@
         "sourcePages": [
           23
         ],
-        "consumptionText": "",
+        "consumptionText": "Средний расход: 1,0-1,2 кг сухой смеси на 1 м2 на 1 мм",
         "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.0,
+        "rateMax": 1.2,
         "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0198",
@@ -6503,15 +7835,18 @@
         "sourcePages": [
           24
         ],
-        "consumptionText": "",
+        "consumptionText": "Средний расход: 1,1-1,2 кг сухой смеси на 1 м2 на 1 мм",
         "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.1,
+        "rateMax": 1.2,
         "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0199",
@@ -6535,15 +7870,27 @@
         "sourcePages": [
           25
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,6-1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "5 кг; 25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.6,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0200",
@@ -6567,15 +7914,27 @@
         "sourcePages": [
           25
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,6-1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "5 кг; 25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.6,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0201",
@@ -6599,15 +7958,23 @@
         "sourcePages": [
           26
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,3-1,4 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.3,
+        "rateMax": 1.4,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0202",
@@ -6631,15 +7998,23 @@
         "sourcePages": [
           28
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,6-1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.6,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0203",
@@ -6663,15 +8038,23 @@
         "sourcePages": [
           28
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,6-1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.6,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0204",
@@ -6703,7 +8086,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0205",
@@ -6735,7 +8121,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0206",
@@ -6767,7 +8156,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0207",
@@ -6791,15 +8183,27 @@
         "sourcePages": [
           35
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 0,8-1,0 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "5 кг; 15 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.8,
+        "rateMax": 1.0,
+        "packOptions": [
+          {
+            "amount": 5.0,
+            "unit": "кг"
+          },
+          {
+            "amount": 15.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0208",
@@ -6831,7 +8235,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0209",
@@ -6855,15 +8262,23 @@
         "sourcePages": [
           42
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,8 – 2,0 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.8,
+        "rateMax": 2.0,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0210",
@@ -6887,15 +8302,23 @@
         "sourcePages": [
           44
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,6 – 1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.6,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0211",
@@ -6919,15 +8342,23 @@
         "sourcePages": [
           44
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,6 – 1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.6,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0212",
@@ -6951,15 +8382,23 @@
         "sourcePages": [
           45
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,6 – 1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.6,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0213",
@@ -6983,15 +8422,23 @@
         "sourcePages": [
           45
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,6 – 1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.6,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0214",
@@ -7016,14 +8463,22 @@
           47
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "20 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0215",
@@ -7048,14 +8503,22 @@
           47
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "20 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 20.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0216",
@@ -7080,14 +8543,22 @@
           48
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0217",
@@ -7112,14 +8583,22 @@
           48
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0218",
@@ -7143,15 +8622,23 @@
         "sourcePages": [
           50
         ],
-        "consumptionText": "",
-        "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
-        "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "consumptionText": "Средний расход: 1,8 кг сухой смеси на 1 м2 на 1 мм",
+        "packagingText": "25 кг",
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.8,
+        "rateMax": 1.8,
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0219",
@@ -7175,15 +8662,18 @@
         "sourcePages": [
           51
         ],
-        "consumptionText": "",
+        "consumptionText": "Средний расход: 1,8 кг сухой смеси на 1 м2 на 1 мм",
         "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
+        "rateBasis": "per_mm",
+        "rateUnit": "кг/м²",
+        "rateMin": 1.8,
+        "rateMax": 1.8,
         "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "conditional",
+      "rateReason": "Норма зависит от толщины слоя или геометрии швов",
+      "rateUnitVerified": true
     },
     {
       "id": "pdf-тайфун-0220",
@@ -7208,14 +8698,22 @@
           53
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0221",
@@ -7240,14 +8738,22 @@
           53
         ],
         "consumptionText": "",
-        "packagingText": "",
+        "packagingText": "25 кг",
         "rateBasis": "",
         "rateUnit": "",
         "rateMin": null,
         "rateMax": null,
-        "packOptions": [],
+        "packOptions": [
+          {
+            "amount": 25.0,
+            "unit": "кг"
+          }
+        ],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0222",
@@ -7279,7 +8785,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0223",
@@ -7311,7 +8820,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0224",
@@ -7343,7 +8855,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0225",
@@ -7375,7 +8890,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0226",
@@ -7407,7 +8925,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0227",
@@ -7439,7 +8960,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0228",
@@ -7471,7 +8995,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0229",
@@ -7503,7 +9030,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0230",
@@ -7535,7 +9065,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0231",
@@ -7567,7 +9100,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0232",
@@ -7599,7 +9135,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "application",
+      "rateReason": "Расход зависит от способа применения или единиц измерения; проверьте паспорт",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0233",
@@ -7631,7 +9170,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0234",
@@ -7663,7 +9205,10 @@
         "rateMax": null,
         "packOptions": [],
         "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+      },
+      "rateStatus": "missing",
+      "rateReason": "Однозначная норма в извлечённых данных не найдена",
+      "rateUnitVerified": false
     },
     {
       "id": "pdf-тайфун-0235",
@@ -7687,15 +9232,18 @@
         "sourcePages": [
           63
         ],
-        "consumptionText": "",
+        "consumptionText": "РАСХОД Около 0,7 кг/м²",
         "packagingText": "",
-        "rateBasis": "",
-        "rateUnit": "",
-        "rateMin": null,
-        "rateMax": null,
+        "rateBasis": "area",
+        "rateUnit": "кг/м²",
+        "rateMin": 0.7,
+        "rateMax": 0.7,
         "packOptions": [],
-        "extraction": "Автоматическое извлечение: проверьте по странице PDF перед закупкой"
-      }
+        "extraction": "Автоматически найдено в указанном PDF; сверить перед закупкой"
+      },
+      "rateStatus": "source_rate",
+      "rateReason": "Извлечена норма; проверьте паспорт",
+      "rateUnitVerified": true
     }
   ]
 }
