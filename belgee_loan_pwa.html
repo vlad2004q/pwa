@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELGEE Loan PWA</title>
+    <meta name="theme-color" content="#090d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root { --bg: #090d16; --panel: #111827; --fg: #f3f4f6; --accent: #00f2fe; --btn: #2563eb; --entry: #1f2937; --card-title: #9ca3af; }
+        [data-theme="light"] { --bg: #f8fafc; --panel: #ffffff; --fg: #0f172a; --accent: #2563eb; --btn: #2563eb; --entry: #f1f5f9; --card-title: #64748b; }
+        [data-theme="banking"] { --bg: #0f172a; --panel: #1e3a8a; --fg: #ffffff; --accent: #fbbf24; --btn: #d97706; --entry: #1e40af; --card-title: #93c5fd; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg); color: var(--fg); padding: 15px; transition: all 0.3s; }
+        .header { display: flex; justify-content: space-between; align-items: center; background: var(--panel); padding: 15px; border-radius: 12px; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .header h1 { font-size: 18px; font-weight: bold; }
+        .theme-btns button { background: var(--entry); color: var(--fg); border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: bold; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 15px; }
+        .card { background: var(--panel); padding: 12px; border-radius: 10px; }
+        .card-title { font-size: 11px; color: var(--card-title); margin-bottom: 4px; }
+        .card-val { font-size: 15px; font-weight: bold; }
+        .main-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        @media(min-width: 768px) { .main-grid { grid-template-columns: 320px 1fr; } }
+        .panel { background-color: var(--panel); padding: 15px; border-radius: 12px; }
+        .form-group { margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .form-group label { font-size: 12px; color: var(--fg); }
+        .form-group input { width: 110px; padding: 6px; border-radius: 6px; border: none; background: var(--entry); color: var(--fg); text-align: right; font-weight: bold; }
+        .radio-group { margin: 10px 0; font-size: 12px; }
+        .radio-group label { display: block; margin-bottom: 5px; cursor: pointer; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 15px; border-bottom: 1px solid var(--entry); padding-bottom: 8px; }
+        .tab-btn { background: none; border: none; color: var(--fg); font-weight: bold; padding: 5px 10px; cursor: pointer; opacity: 0.6; }
+        .tab-btn.active { opacity: 1; border-bottom: 2px solid var(--accent); color: var(--accent); }
+        .table-container { overflow-x: auto; max-height: 400px; }
+        table { width: 100%; border-collapse: collapse; font-size: 11px; text-align: center; }
+        th { background: var(--entry); padding: 8px; position: sticky; top: 0; }
+        td { padding: 6px; border-bottom: 1px solid var(--entry); }
+        .chart-container { position: relative; height: 300px; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚗 BELGEE X80 PWA</h1>
+        <div class="theme-btns">
+            <button onclick="setTheme('dark')">⚡ Dark</button>
+            <button onclick="setTheme('light')">🍏 Light</button>
+            <button onclick="setTheme('banking')">🏛️ Bank</button>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="card"><div class="card-title">Сумма кредита</div><div class="card-val" id="lblLoan">0 BYN</div></div>
+        <div class="card"><div class="card-title">Переплата</div><div class="card-val" id="lblInterest">0 BYN</div></div>
+        <div class="card"><div class="card-title">Всего выплат</div><div class="card-val" id="lblTotal">0 BYN</div></div>
+        <div class="card"><div class="card-title">Реальный срок</div><div class="card-val" id="lblTerm">0 мес.</div></div>
+    </div>
+    <div class="main-grid">
+        <div class="panel">
+            <h3 style="margin-bottom: 12px; font-size: 14px; color: var(--accent);">Параметры кредита</h3>
+            <div class="form-group"><label>Цена авто (BYN):</label><input type="number" id="carPrice" value="86900" oninput="calc()"></div>
+            <div class="form-group"><label>Аванс (%):</label><input type="number" id="downPct" value="40" oninput="calc()"></div>
+            <div class="form-group"><label>Кредит (любой):</label><input type="number" id="customLoan" placeholder="Авто" oninput="calc()"></div>
+            <div class="form-group"><label>Срок (мес):</label><input type="number" id="termMonths" value="120" oninput="calc()"></div>
+            <div class="form-group"><label>Льготная ставка (%):</label><input type="number" id="promoRate" value="5.0" step="0.1" oninput="calc()"></div>
+            <div class="form-group"><label>Льготный срок (мес):</label><input type="number" id="promoMonths" value="36" oninput="calc()"></div>
+            <div class="form-group"><label>Базовая ставка (%):</label><input type="number" id="baseRate" value="15.75" step="0.1" oninput="calc()"></div>
+            <hr style="border: 0; border-top: 1px solid var(--entry); margin: 12px 0;">
+            <h3 style="margin-bottom: 10px; font-size: 14px; color: var(--accent);">Досрочное погашение</h3>
+            <div class="form-group"><label>Сумма досрочки (BYN):</label><input type="number" id="extraAmt" value="0" oninput="calc()"></div>
+            <div class="form-group"><label>В месяц №:</label><input type="number" id="extraMonth" value="12" oninput="calc()"></div>
+            <hr style="border: 0; border-top: 1px solid var(--entry); margin: 12px 0;">
+            <div class="radio-group">
+                <label><input type="radio" name="mode" value="diff" checked onclick="calc()"> График банка (уменьш.)</label>
+                <label><input type="radio" name="mode" value="fixed" onclick="calc()"> Фиксированный платеж</label>
+            </div>
+            <div class="form-group"><label>Платеж (BYN):</label><input type="number" id="fixPay" value="960" oninput="calc()"></div>
+        </div>
+        <div>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('table', this)">Таблица</button>
+                <button class="tab-btn" onclick="switchTab('chart', this)">График</button>
+            </div>
+            <div id="tab-table" class="panel">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr><th>Мес</th><th>Долг</th><th>%</th><th>Итого</th><th>Остаток</th><th>Ставка</th></tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="tab-chart" class="panel" style="display:none;">
+                <div class="chart-container"><canvas id="loanChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let myChart = null;
+        function setTheme(theme) {
+            if(theme === "dark") document.documentElement.removeAttribute("data-theme");
+            else document.documentElement.setAttribute("data-theme", theme);
+            if(myChart) calc();
+        }
+        function switchTab(tab, btn) {
+            document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            document.getElementById("tab-table").style.display = tab === "table" ? "block" : "none";
+            document.getElementById("tab-chart").style.display = tab === "chart" ? "block" : "none";
+        }
+        function calc() {
+            const price = parseFloat(document.getElementById("carPrice").value) || 0;
+            const pct = parseFloat(document.getElementById("downPct").value) || 0;
+            const customLoan = parseFloat(document.getElementById("customLoan").value) || 0;
+            const term = parseInt(document.getElementById("termMonths").value) || 120;
+            const pRate = (parseFloat(document.getElementById("promoRate").value) || 5) / 100;
+            const pMonths = parseInt(document.getElementById("promoMonths").value) || 36;
+            const bRate = (parseFloat(document.getElementById("baseRate").value) || 15.75) / 100;
+            const extraAmt = parseFloat(document.getElementById("extraAmt").value) || 0;
+            const extraM = parseInt(document.getElementById("extraMonth").value) || 12;
+            const mode = document.querySelector('input[name="mode"]:checked').value;
+            const fixPay = parseFloat(document.getElementById("fixPay").value) || 960;
+
+            let loanAmount = customLoan > 0 ? customLoan : price * (1 - pct / 100);
+            let balance = loanAmount;
+            let totalInterest = 0, totalPaid = 0, month = 0;
+
+            const tbody = document.getElementById("tableBody");
+            tbody.innerHTML = "";
+            const monthsArr = [], balanceArr = [];
+
+            if(mode === "diff") {
+                let fixedPrincipal = term > 0 ? loanAmount / term : 0;
+                while(balance > 0.01 && month < 360) {
+                    month++;
+                    let rate = month <= pMonths ? pRate : bRate;
+                    let interest = balance * (rate / 12);
+                    let principal = Math.min(balance, fixedPrincipal);
+                    if(month === extraM && extraAmt > 0) {
+                        principal += Math.min(balance - principal, extraAmt);
+                    }
+                    let total = principal + interest;
+                    balance -= principal;
+                    totalInterest += interest;
+                    totalPaid += total;
+                    monthsArr.push(month); balanceArr.push(balance);
+                    tbody.innerHTML += `<tr><td>${month}</td><td>${principal.toFixed(1)}</td><td>${interest.toFixed(1)}</td><td>${total.toFixed(1)}</td><td>${Math.max(0, balance).toFixed(1)}</td><td>${(rate*100).toFixed(1)}%</td></tr>`;
+                }
+            } else {
+                while(balance > 0.01 && month < 600) {
+                    month++;
+                    let rate = month <= pMonths ? pRate : bRate;
+                    let interest = balance * (rate / 12);
+                    if(fixPay <= interest) break;
+                    let principal = Math.min(balance, fixPay - interest);
+                    if(month === extraM && extraAmt > 0) {
+                        principal += Math.min(balance - principal, extraAmt);
+                    }
+                    let total = principal + interest;
+                    balance -= principal;
+                    totalInterest += interest;
+                    totalPaid += total;
+                    monthsArr.push(month); balanceArr.push(balance);
+                    tbody.innerHTML += `<tr><td>${month}</td><td>${principal.toFixed(1)}</td><td>${interest.toFixed(1)}</td><td>${total.toFixed(1)}</td><td>${Math.max(0, balance).toFixed(1)}</td><td>${(rate*100).toFixed(1)}%</td></tr>`;
+                }
+            }
+
+            document.getElementById("lblLoan").innerText = loanAmount.toLocaleString("ru-RU", {maximumFractionDigits:0}) + " BYN";
+            document.getElementById("lblInterest").innerText = totalInterest.toLocaleString("ru-RU", {maximumFractionDigits:0}) + " BYN";
+            document.getElementById("lblTotal").innerText = totalPaid.toLocaleString("ru-RU", {maximumFractionDigits:0}) + " BYN";
+            document.getElementById("lblTerm").innerText = month + " мес.";
+            renderChart(monthsArr, balanceArr);
+        }
+
+        function renderChart(labels, data) {
+            const ctx = document.getElementById("loanChart").getContext("2d");
+            if(myChart) myChart.destroy();
+            const color = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();
+            myChart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Остаток долга (BYN)",
+                        data: data,
+                        borderColor: color || "#00f2fe",
+                        backgroundColor: "rgba(0, 242, 254, 0.1)",
+                        fill: true,
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { title: { display: true, text: "Месяц" } },
+                        y: { title: { display: true, text: "BYN" } }
+                    }
+                }
+            });
+        }
+        calc();
+    </script>
+</body>
+</html>
