@@ -27,3 +27,14 @@ assert(read('index.html').includes('pro-ux.css'));
 assert(read('sw.js').includes('./assets/pro-ux.css'));
 assert(!read('assets/pro-elegance.js').includes('document.body.appendChild(toggle)'), 'duplicate animation toggle');
 console.log('PASS: all 10 apps, mobile UX styles, unified settings and offline cache');
+
+for(const app of ['garage','estimate','car-care','home-budget','converter','checklist']){
+ const html=read('apps/'+app+'/index.html');
+ assert(html.includes('href="../../index.html"'),'missing hub back: '+app);
+ assert(html.includes('manifest.webmanifest'),'missing PWA manifest: '+app);
+ assert(fs.existsSync(path.join(root,'apps',app,'index.html')),'missing app: '+app);
+ assert(sw.includes('./apps/'+app+'/index.html'),'missing offline precache: '+app);
+ assert(registry.includes(app),'missing registry entry: '+app);
+}
+assert((registry.match(/path['\"]?:/g)||[]).length>=16,'expected 16 app entries');
+console.log('PASS: six new modules, registry and offline cache');
