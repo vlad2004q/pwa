@@ -1,0 +1,180 @@
+{
+  "version": "2026-10-17",
+  "brand": "Varmega",
+  "sourceNote": "Артикулы подтверждены в указанных источниках. Каталог неполный; изображения пользовательские, цены вводятся вручную.",
+  "products": [
+    {
+      "sku": "VM50101",
+      "name": "Varmega Flex PE-Xa/EVOH 16×2,2",
+      "kind": "Труба",
+      "system": "slide",
+      "diameter": 16,
+      "wall": 2.2,
+      "ends": [
+        "pipe:16:2.2"
+      ],
+      "source": "https://varmega.ru/upload/iblock/dda/irfmshn15ho9p8z0efkpc17crxvp25no.pdf",
+      "notes": "",
+      "photo": null
+    },
+    {
+      "sku": "VM50102",
+      "name": "Varmega Flex PE-Xa/EVOH 20×2,8",
+      "kind": "Труба",
+      "system": "slide",
+      "diameter": 20,
+      "wall": 2.8,
+      "ends": [
+        "pipe:20:2.8"
+      ],
+      "source": "https://varmega.ru/upload/iblock/dda/irfmshn15ho9p8z0efkpc17crxvp25no.pdf",
+      "notes": "",
+      "photo": null
+    },
+    {
+      "sku": "VM50103",
+      "name": "Varmega Flex PE-Xa/EVOH 25×3,5",
+      "kind": "Труба",
+      "system": "slide",
+      "diameter": 25,
+      "wall": 3.5,
+      "ends": [
+        "pipe:25:3.5"
+      ],
+      "source": "https://varmega.ru/upload/iblock/dda/irfmshn15ho9p8z0efkpc17crxvp25no.pdf",
+      "notes": "",
+      "photo": null
+    },
+    {
+      "sku": "VM50104",
+      "name": "Varmega Flex PE-Xa/EVOH 32×4,4",
+      "kind": "Труба",
+      "system": "slide",
+      "diameter": 32,
+      "wall": 4.4,
+      "ends": [
+        "pipe:32:4.4"
+      ],
+      "source": "https://varmega.ru/upload/iblock/dda/irfmshn15ho9p8z0efkpc17crxvp25no.pdf",
+      "notes": "",
+      "photo": null
+    },
+    {
+      "sku": "VM09203",
+      "name": "Резьбозажимное соединение 3/4 EK × 16×2,2",
+      "kind": "Евроконус",
+      "system": "euro",
+      "diameter": 16,
+      "wall": 2.2,
+      "ends": [
+        "pipe:16:2.2",
+        "thread:3/4:EK"
+      ],
+      "source": "https://varmega.ru/upload/iblock/dda/irfmshn15ho9p8z0efkpc17crxvp25no.pdf",
+      "notes": "Не аксиальный фитинг: требуется совместимый ответный евроконус.",
+      "photo": null
+    },
+    {
+      "sku": "VM09205",
+      "name": "Резьбозажимное соединение 3/4 EK × 20×2,8",
+      "kind": "Евроконус",
+      "system": "euro",
+      "diameter": 20,
+      "wall": 2.8,
+      "ends": [
+        "pipe:20:2.8",
+        "thread:3/4:EK"
+      ],
+      "source": "https://varmega.ru/upload/iblock/dda/irfmshn15ho9p8z0efkpc17crxvp25no.pdf",
+      "notes": "Не аксиальный фитинг: требуется совместимый ответный евроконус.",
+      "photo": null
+    },
+    {
+      "sku": "VM09402",
+      "name": "Резьбозажимное соединение 1/2 × 16×2,2",
+      "kind": "Резьбозажимной",
+      "system": "compression",
+      "diameter": 16,
+      "wall": 2.2,
+      "ends": [
+        "pipe:16:2.2",
+        "thread:1/2:unknown"
+      ],
+      "source": "https://varmega.ru/upload/iblock/dda/irfmshn15ho9p8z0efkpc17crxvp25no.pdf",
+      "notes": "Тип ответной резьбы проверить по паспорту.",
+      "photo": null
+    },
+    {
+      "sku": "VM51311",
+      "name": "Slide-fit муфта ВР 16 × 1/2, латунь",
+      "kind": "Переходная муфта",
+      "system": "slide",
+      "diameter": 16,
+      "wall": null,
+      "ends": [
+        "slide:16",
+        "thread:1/2:F"
+      ],
+      "source": "https://xn--b1agyekgek.xn--p1ai/offer/varmega-slide-fit-mufta-aksialnaya-vr-25x1-latun/",
+      "notes": "Размер трубы по стенке и необходимость гильзы подтвердить по паспорту.",
+      "photo": null
+    },
+    {
+      "sku": "VM51313",
+      "name": "Slide-fit муфта ВР 20 × 1/2, латунь",
+      "kind": "Переходная муфта",
+      "system": "slide",
+      "diameter": 20,
+      "wall": null,
+      "ends": [
+        "slide:20",
+        "thread:1/2:F"
+      ],
+      "source": "https://xn--b1agyekgek.xn--p1ai/offer/varmega-slide-fit-mufta-aksialnaya-vr-25x1-latun/",
+      "notes": "Размер трубы по стенке и необходимость гильзы подтвердить по паспорту.",
+      "photo": null
+    },
+    {
+      "sku": "VM51312",
+      "name": "Slide-fit муфта ВР 16 × 3/4, латунь",
+      "kind": "Переходная муфта",
+      "system": "slide",
+      "diameter": 16,
+      "wall": null,
+      "ends": [
+        "slide:16",
+        "thread:3/4:F"
+      ],
+      "source": "https://xn--b1agyekgek.xn--p1ai/offer/varmega-slide-fit-mufta-aksialnaya-vr-25x1-latun/",
+      "notes": "Размер трубы по стенке и необходимость гильзы подтвердить по паспорту.",
+      "photo": null
+    },
+    {
+      "sku": "VM52501",
+      "name": "Slide-fit Г-образная радиаторная трубка",
+      "kind": "Радиаторная трубка",
+      "system": "slide",
+      "diameter": null,
+      "wall": null,
+      "ends": [
+        "slide:unknown",
+        "tube:15"
+      ],
+      "source": "https://kermi-fko.ru/varmega-vm52501.aspx",
+      "notes": "Диаметр присоединяемой трубы уточнить по паспорту.",
+      "photo": null
+    },
+    {
+      "sku": "VM59001",
+      "name": "Планка под водорозетку 75/150",
+      "kind": "Монтажная планка",
+      "system": "accessory",
+      "diameter": null,
+      "wall": null,
+      "ends": [],
+      "source": "https://evo-shop.webasyst.cloud/brand/varmega/",
+      "notes": "Проверить крепёжные размеры водорозеток.",
+      "photo": null
+    }
+  ]
+}

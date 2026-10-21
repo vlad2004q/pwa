@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Инженерный Эко-Калькулятор и Конструктор Электрощитка PRO</title>
+    <meta name="theme-color" content="#0b0f17">
+    <style>
+        :root {
+            --bg-color: #0b0f17;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --accent: #f59e0b;
+            --accent-glow: rgba(245, 158, 11, 0.2);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --danger: #ef4444;
+            --success: #10b981;
+            --shield-bg: #090d14;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 50%, #0b0f17 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: clamp(10px, 2vw, 20px);
+            padding-bottom: 60px;
+            overflow-x: hidden;
+        }
+        button, input, select { touch-action: manipulation; }
+        input, select { min-height: 42px; }
+        .modules-nav { position: sticky; top: 0; z-index: 5; background: rgba(11,15,23,.82); backdrop-filter: blur(14px); padding-top: 8px; }
+        .module-card { min-width: 0; }
+        .appliance-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:8px; margin-top:8px; }
+        .appliance-item { display:flex; align-items:center; gap:8px; padding:9px; border:1px solid var(--card-border); border-radius:10px; background:rgba(255,255,255,.04); font-size:.72rem; color:var(--text-main); }
+        .appliance-item input { width:auto; min-height:auto; accent-color:var(--accent); }
+        .hint { color:var(--text-muted); font-size:.68rem; line-height:1.45; margin-top:8px; }
+
+        .panel-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.line-add-btn.secondary{background:rgba(255,255,255,.045);border-color:var(--card-border)}
+        .panel-pro-grid{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.5fr);gap:12px;align-items:start}.panel-subcard{min-width:0;padding:12px;border:1px solid var(--card-border);border-radius:15px;background:rgba(255,255,255,.025)}.panel-subcard h3{font-size:.85rem;margin:7px 0 10px}
+        .preset-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.preset-card{display:flex;flex-direction:column;gap:5px;text-align:left;padding:11px 9px;border:1px solid var(--card-border);border-radius:11px;color:var(--text-main);background:linear-gradient(145deg,rgba(38,49,67,.9),rgba(20,27,39,.9));cursor:pointer}.preset-card:hover{border-color:var(--accent)}.preset-card b{font-size:.7rem}.preset-card small{font-size:.61rem;color:var(--text-muted)}
+        .panel-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-bottom:10px}.panel-stats>div{padding:8px;border:1px solid var(--card-border);border-radius:10px;background:rgba(255,255,255,.035);min-width:0}.panel-stats small{display:block;color:var(--text-muted);font-size:.58rem}.panel-stats strong{display:block;color:var(--accent);font-size:.9rem;margin-top:5px;overflow-wrap:anywhere}
+        .din-enclosure{padding:10px;border:1px solid #465165;border-radius:14px;background:linear-gradient(145deg,#1c2533,#101722);box-shadow:inset 0 1px #ffffff0c}.din-heading{display:flex;justify-content:space-between;gap:8px;padding:3px 2px 10px;color:#9aa8ba;font-size:.62rem;letter-spacing:.08em}.panel-rails{display:grid;gap:10px}.panel-rail-row{padding:7px;border:1px solid #3a4658;border-radius:9px;background:#111923}.panel-rail-label{display:flex;justify-content:space-between;color:#8795a9;font-size:.58rem;margin-bottom:7px}.panel-rail{display:flex;gap:3px;min-height:74px;padding:5px;overflow-x:auto;border-radius:6px;background:linear-gradient(180deg,#687487,#293344 16%,#121a25 17%,#121a25 82%,#778396 83%)}
+        .panel-device{flex:0 0 calc(var(--w,1)*27px);min-width:27px;min-height:62px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:4px 2px;border:1px solid #758195;border-radius:5px;color:#172033;background:linear-gradient(90deg,#d4dce6,#fff 40%,#c5ced9);cursor:pointer;box-shadow:0 2px 3px #0007}.panel-device.protection{background:linear-gradient(90deg,#d4dce6,#fff 40%,#b9c5d4)}.panel-device.selected{outline:2px solid #f59e0b;outline-offset:1px}.panel-device .switch-mark{width:11px;height:21px;border:1px solid #1c2533;border-radius:3px;background:linear-gradient(90deg,#303b4b,#8793a3,#273243)}.panel-device.protection .switch-mark{background:linear-gradient(90deg,#f59e0b,#ffe0a3,#c87900)}.panel-device small{font-size:.48rem;font-weight:900;text-align:center;line-height:1.1;overflow-wrap:anywhere}.panel-device em{font-size:.48rem;font-style:normal;font-weight:900}.rail-empty{flex:1;min-width:22px;display:flex;align-items:center;justify-content:center;color:#7f8da2;font-size:.58rem;border:1px dashed #485568;border-radius:4px}
+        .panel-editor{display:grid;gap:8px}.panel-editor-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.panel-editor label{display:block;color:var(--text-muted);font-size:.63rem;margin-bottom:4px}.panel-editor input,.panel-editor select{width:100%;min-width:0}.panel-summary{padding:9px;border:1px solid var(--card-border);border-radius:9px;font-size:.68rem;line-height:1.5;background:#ffffff06}.panel-diagram{padding:11px;border:1px solid var(--card-border);border-radius:10px;background:#101722;overflow-x:auto}.diagram-row{display:flex;align-items:center;gap:6px;min-width:max-content}.diagram-node{padding:9px;border:1px solid #46556b;border-radius:8px;background:#1c293a;color:#e6edf7;font-size:.62rem;text-align:center;min-width:76px}.diagram-node.primary{border-color:#f59e0b;color:#fbbf24}.diagram-arrow{color:#f59e0b}.panel-audit,.panel-bom{display:grid;gap:6px}.panel-message{padding:9px;border:1px solid var(--card-border);border-left:3px solid #34d399;border-radius:8px;background:#ffffff04;color:#dbe5f1;font-size:.67rem;line-height:1.45}.panel-message.warn{border-left-color:#f59e0b}.panel-message.error{border-left-color:#f87171}.panel-bom-row{display:flex;justify-content:space-between;gap:8px;padding:8px;border-radius:8px;background:#ffffff06;font-size:.67rem}.panel-bom-row span:last-child{color:var(--accent);font-weight:800;white-space:nowrap}
+        @media(max-width:760px){.panel-pro-grid{grid-template-columns:1fr}.panel-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+        @media print{.panel-actions,.panel-subcard:first-child{display:none!important}.module-card{display:block!important;box-shadow:none!important}}
+
+        /* Полностью стилизованный список вместо системного popup */
+        .custom-select { position:relative; width:100%; }
+        .custom-select-trigger {
+            width:100%; min-height:44px; display:flex; align-items:center; justify-content:space-between;
+            gap:12px; padding:10px 13px; border-radius:13px; cursor:pointer;
+            color:var(--text-main); background:linear-gradient(135deg,rgba(38,48,66,.98),rgba(25,33,47,.98));
+            border:1px solid rgba(245,158,11,.95); box-shadow:0 0 0 1px rgba(245,158,11,.08), inset 0 1px rgba(255,255,255,.05);
+            text-align:left; font-size:.8rem; font-weight:700;
+        }
+        .custom-select-trigger:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+        .select-chevron { color:var(--accent); font-size:1.15rem; transition:transform .18s ease; }
+        .custom-select.open .select-chevron { transform:rotate(180deg); }
+        .custom-select-menu {
+            display:none; position:absolute; z-index:30; left:0; right:0; top:calc(100% + 6px);
+            padding:5px; border-radius:14px; background:rgba(18,25,38,.98);
+            border:1px solid rgba(245,158,11,.45); box-shadow:0 18px 40px rgba(0,0,0,.48),0 0 0 1px rgba(255,255,255,.035);
+            backdrop-filter:blur(22px); -webkit-backdrop-filter:blur(22px);
+            max-height:240px; overflow-y:auto;
+        }
+        .custom-select.open .custom-select-menu { display:block; animation:selectIn .14s ease-out; }
+        @keyframes selectIn { from { opacity:0; transform:translateY(-4px) scale(.99); } to { opacity:1; transform:translateY(0) scale(1); } }
+        .custom-option {
+            display:grid; grid-template-columns:1fr auto; grid-template-rows:auto auto; gap:2px 8px;
+            width:100%; padding:10px 11px; border:1px solid transparent; border-radius:9px;
+            color:#e8edf5; background:transparent; text-align:left; cursor:pointer;
+        }
+        .custom-option:hover, .custom-option:focus-visible { background:rgba(245,158,11,.10); border-color:rgba(245,158,11,.28); outline:none; }
+        .custom-option.selected { background:linear-gradient(90deg,rgba(245,158,11,.18),rgba(245,158,11,.06)); border-color:rgba(245,158,11,.34); }
+        .option-main { font-size:.82rem; font-weight:750; }
+        .option-sub { grid-column:1; color:#94a3b8; font-size:.66rem; line-height:1.35; }
+        .option-check { grid-column:2; grid-row:1/3; align-self:center; color:var(--accent); opacity:0; font-weight:800; }
+        .custom-option.selected .option-check { opacity:1; }
+
+        .wide-field { grid-column:1/-1; }
+        @media(max-width:420px) {
+            .module-card { padding:13px; border-radius:18px; }
+            .grid-2 { grid-template-columns:1fr 1fr; gap:8px; }
+            .tab-btn { padding:9px 11px; }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        header p {
+            font-size: 0.7rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        /* Навигация по модулям (табы) */
+        .modules-nav {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+            scrollbar-width: none;
+        }
+        .modules-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-muted);
+            padding: 8px 12px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+            box-shadow: 0 4px 15px var(--accent-glow);
+        }
+
+        /* Карточки модулей */
+        .module-card {
+            display: none;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 18px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .module-card.active {
+            display: block;
+        }
+
+        h2.module-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        input, select {
+            width: 100%;
+            background: #202838;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 10px 12px;
+            color: var(--text-main);
+            color-scheme: dark;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        select {
+            appearance: auto;
+            -webkit-appearance: menulist;
+        }
+        select option, select optgroup {
+            background-color: #202838;
+            color: #f8fafc;
+        }
+        select option:checked {
+            background: #f59e0b;
+            color: #111827;
+        }
+        select:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .result-box {
+            margin-top: 14px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 12px;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            margin-bottom: 6px;
+        }
+        .result-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .result-val {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .alert-box {
+            margin-top: 10px;
+            font-size: 0.7rem;
+            padding: 10px;
+            border-radius: 10px;
+            line-height: 1.4;
+        }
+        .alert-warn {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #fca5a5;
+        }
+        .alert-ok {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #6ee7b7;
+        }
+
+        /* --- СТИЛИ КОНСТРУКТОРА ЩИТКА --- */
+        .shield-builder-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        @media(min-width: 768px) {
+            .shield-builder-layout {
+                display: grid;
+                grid-template-columns: 280px 1fr;
+            }
+        }
+
+        .lines-selector-panel {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 12px;
+        }
+
+        .lines-grid-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 8px;
+            max-height: 420px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .line-add-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 10px 12px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            transition: background 0.1s;
+        }
+        .line-add-btn:hover, .line-add-btn:active {
+            background: var(--accent);
+            color: #000;
+            border-color: var(--accent);
+        }
+
+        .din-rail-box {
+            background: var(--shield-bg);
+            border: 2px solid #1e293b;
+            border-radius: 16px;
+            padding: 14px;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .din-rail-title {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .modules-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .shield-module-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            border-left-width: 4px;
+            border-radius: 12px;
+            padding: 10px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .shield-module-card.zone-wet { border-left-color: #06b6d4; }
+        .shield-module-card.zone-power { border-left-color: #f59e0b; }
+        .shield-module-card.zone-light { border-left-color: #10b981; }
+
+        .module-info h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .module-info p {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .module-del-btn {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            color: #fca5a5;
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .module-del-btn:hover {
+            background: var(--danger);
+            color: #fff;
+        }
+
+        .audit-panel {
+            margin-top: 14px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 12px;
+        }
+        .audit-title {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .audit-messages {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    @media print{body{background:white!important;color:black!important}.modules-nav,header,.panel-actions,.panel-settings,.preset-grid,#panelEditor{display:none!important}#mod-10{display:block!important;background:white!important;color:black!important}.panel-subcard,.din-enclosure,.panel-diagram,.panel-message,.panel-bom-row{color:#111!important;background:#fff!important;break-inside:avoid}.panel-device{color:#111!important}.panel-pro-grid{display:block}.panel-subcard{margin-bottom:12px}.panel-rail{overflow:visible}.panel-diagram{overflow:visible}.diagram-row{min-width:0;flex-wrap:wrap}.diagram-node{color:#111!important;background:#fff!important}}
+</style>
+<link rel="stylesheet" href="../../assets/offline-ui.css"><script defer src="../../assets/workspace.js"></script><link rel="stylesheet" href="../../assets/pro6.css"><script defer src="../../assets/pro6.js"></script><link rel="stylesheet" href="../../assets/material-calculator.css"><link rel="stylesheet" href="../../assets/pro7.css"><script defer src="../../assets/pro7.js"></script><script defer src="../../assets/electric-v5.js"></script><link rel="stylesheet" href="../../assets/pro-motion.css"><script defer src="../../assets/pro-motion.js"></script><link rel="stylesheet" href="../../assets/pro-results.css"><script defer src="../../assets/pro-results.js"></script><link rel="stylesheet" href="../../assets/pro-elegance.css"><script defer src="../../assets/pro-elegance.js"></script><link rel="stylesheet" href="../../assets/pro-design.css"><link rel="stylesheet" href="../../assets/pro-premium.css"><script defer src="../../assets/pro-premium.js"></script><link rel="stylesheet" href="../../assets/pro-ux.css"><link rel="stylesheet" href="../../assets/ecosystem-unified.css"><link rel="stylesheet" href="../../assets/ecosystem-84.css"><script defer src="../../assets/ecosystem-84.js"></script><link rel="stylesheet" href="../../assets/ecosystem-85.css"><link rel="stylesheet" href="../../assets/ecosystem-86.css"><link rel="stylesheet" href="../../assets/unified-nav.css"><script defer src="../../assets/unified-nav.js"></script><script defer src="../../assets/pro-backup93.js"></script><link rel="stylesheet" href="../../assets/pro99.css">
+</head>
+<body><nav class="pro-back"><a href="../../index.html">← Главная / Хаб</a><span>PRO Ecosystem · electric</span><button onclick="history.length>1?history.back():location.assign('../../index.html')">↩ Назад</button></nav>
+
+    <header>
+        <h1>⚡ Инженерный Электрик PRO</h1>
+        <p>11 модулей: калькуляторы + конструктор щитка</p>
+        <p style="max-width:760px;margin:8px auto 0;color:#94a3b8;text-transform:none;letter-spacing:0;font-size:.68rem;line-height:1.5">
+            Инструмент для предварительных оценок. Результаты не заменяют проект, актуальные нормы, паспорт оборудования и инструментальные измерения.
+        </p>
+    </header>
+
+    <!-- Навигация -->
+    <div class="modules-nav">
+        <button class="tab-btn active" onclick="switchModule(0)">1. Нагрузка/Кабель</button>
+        <button class="tab-btn" onclick="switchModule(1)">2. Падение напр.</button>
+        <button class="tab-btn" onclick="switchModule(2)">3. ТКЗ и Автоматы</button>
+        <button class="tab-btn" onclick="switchModule(3)">4. Гофра (40%)</button>
+        <button class="tab-btn" onclick="switchModule(4)">5. Штангенциркуль</button>
+        <button class="tab-btn" onclick="switchModule(5)">6. Заземление</button>
+        <button class="tab-btn" onclick="switchModule(6)">7. Освещенность</button>
+        <button class="tab-btn" onclick="switchModule(7)">8. Аудит энергии</button>
+        <button class="tab-btn" onclick="switchModule(8)">9. Нагрев в автомате</button>
+        <button class="tab-btn" onclick="switchModule(9)">10. ГОСТ цвета</button>
+        <button class="tab-btn" onclick="switchModule(10)" style="border-color: var(--accent);">🛠️ 11. Конструктор Щитка</button>
+    <button class="tab-btn" onclick="switchModule(11)">12. План помещений</button>
+    </div>
+
+    <!-- Модуль 1 -->
+    <div class="module-card active" id="mod-0">
+        <h2 class="module-title">⚡ Выбор кабеля и защитной аппаратуры</h2>
+        <div class="grid-2">
+            <div class="input-group">
+                <label>Сеть</label>
+                <select id="m1_phase" onchange="calcM1()"><option value="1">1 фаза</option><option value="3">3 фазы</option></select>
+            </div>
+            <div class="input-group">
+                <label>Материал жилы</label>
+                <select id="m1_mat" onchange="calcM1()"><option value="cu">Медь</option><option value="al">Алюминий</option></select>
+            </div>
+        </div>
+        <div class="input-group">
+            <label>Мощность (кВт)</label>
+            <input type="number" id="m1_kw" value="5.5" min="0" step="0.1" oninput="calcM1()">
+        </div>
+        <div class="input-group">
+            <label>Коэффициент мощности cos φ (для переменного тока)</label>
+            <input type="number" id="m1_pf" value="0.95" min="0.1" max="1" step="0.01" oninput="calcM1()">
+        </div>
+        <div class="input-group">
+            <label>Быстро добавить бытовую технику</label>
+            <div class="appliance-grid">
+                <label class="appliance-item"><input type="checkbox" class="appliance" value="2.0" onchange="sumAppliances()"> Чайник 2 кВт</label>
+                <label class="appliance-item"><input type="checkbox" class="appliance" value="1.8" onchange="sumAppliances()"> Стиральная машина 1,8 кВт</label>
+                <label class="appliance-item"><input type="checkbox" class="appliance" value="2.2" onchange="sumAppliances()"> Посудомойка 2,2 кВт</label>
+                <label class="appliance-item"><input type="checkbox" class="appliance" value="3.5" onchange="sumAppliances()"> Варочная панель 3,5 кВт</label>
+                <label class="appliance-item"><input type="checkbox" class="appliance" value="2.0" onchange="sumAppliances()"> Духовой шкаф 2 кВт</label>
+                <label class="appliance-item"><input type="checkbox" class="appliance" value="1.5" onchange="sumAppliances()"> Бойлер 1,5 кВт</label>
+            </div>
+            <p class="hint">При выборе приборов их мощности суммируются и подставляются в поле нагрузки.</p>
+        </div>
+        <div class="result-box">
+            <div class="result-row"><span>Сечение:</span><span class="result-val" id="m1_res_s">0 мм²</span></div>
+            <div class="result-row"><span>Автомат:</span><span class="result-val" id="m1_res_cb">0 А</span></div>
+        </div>
+    </div>
+    
+    <!-- Остальные модули (2-10) с рабочими интерфейсами -->
+    <div class="module-card" id="mod-1">
+        <h2 class="module-title">📉 Длинная линия и падение напряжения</h2>
+        <div class="grid-2">
+            <div class="input-group"><label>Длина (м)</label><input type="number" id="m2_l" value="20" oninput="calcM2()"></div>
+            <div class="input-group"><label>Ток (А)</label><input type="number" id="m2_i" value="16" min="0" oninput="calcM2()"></div>
+            <div class="input-group"><label>Сечение (мм²)</label><select id="m2_s" onchange="calcM2()"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option></select></div>
+            <div class="input-group"><label>Сеть</label><select id="m2_phase" onchange="calcM2()"><option value="1">1 фаза, 230 В</option><option value="3">3 фазы, 400 В</option></select></div>
+            <div class="input-group"><label>Назначение</label><select id="m2_use" onchange="calcM2()"><option value="5">Силовая линия (5%)</option><option value="3">Освещение (3%)</option></select></div>
+        </div>
+        <div class="result-box">
+            <div class="result-row"><span>Падение напряжения:</span><span class="result-val" id="m2_res">0 В (0%)</span></div>
+            <div class="result-row"><span>Оценка:</span><span class="result-val" id="m2_alert">—</span></div>
+        </div>
+    </div>
+
+    <div class="module-card" id="mod-2">
+        <h2 class="module-title">⚡ Токи КЗ и селективность</h2>
+        <div class="grid-2">
+            <div class="input-group"><label>Длина до КЗ (м)</label><input type="number" id="m3_l" value="15" oninput="calcM3()"></div>
+            <div class="input-group"><label>Сечение (мм²)</label><select id="m3_s" onchange="calcM3()"><option value="1.5">1,5</option><option value="2.5" selected>2,5</option><option value="4">4</option><option value="6">6</option><option value="10">10</option></select></div>
+            <div class="input-group"><label>Материал</label><select id="m3_mat" onchange="calcM3()"><option value="0.0178">Медь</option><option value="0.0282">Алюминий</option></select></div>
+            <div class="input-group"><label>Импеданс источника (Ом)</label><input type="number" id="m3_z" value="0.35" min="0" step="0.01" oninput="calcM3()"></div>
+            <div class="input-group"><label>Автомат / отключающая способность</label><select id="m3_breaker" onchange="calcM3()"><option value="4.5">4,5 кА</option><option value="6" selected>6 кА</option><option value="10">10 кА</option></select></div>
+        </div>
+        <div class="result-box">
+            <div class="result-row"><span>Ожидаемый ток КЗ (оценка):</span><span class="result-val" id="m3_res">0 А</span></div>
+            <div class="result-row"><span>Проверка отключающей способности:</span><span class="result-val" id="m3_check">—</span></div>
+        </div>
+        <p class="hint">Упрощённая оценка по сопротивлению линии и заданному импедансу источника. Для выбора аппарата нужны измерения петли «фаза-ноль» и проверка времени отключения.</p>
+    </div>
+
+    <div class="module-card" id="mod-3">
+        <h2 class="module-title">🚰 Заполнение гофры (Правило 40%)</h2>
+        <div class="grid-2">
+            <div class="input-group"><label>Кабелей 3x1.5</label><input type="number" id="m4_1" value="2" oninput="calcM4()"></div>
+            <div class="input-group"><label>Кабелей 3×2,5</label><input type="number" id="m4_2" value="2" min="0" step="1" oninput="calcM4()"></div>
+            <div class="input-group"><label>Кабелей 3×4</label><input type="number" id="m4_3" value="0" min="0" step="1" oninput="calcM4()"></div>
+            <div class="input-group"><label>Кабелей 3×6</label><input type="number" id="m4_4" value="0" min="0" step="1" oninput="calcM4()"></div>
+        </div>
+        <div class="result-box">
+            <div class="result-row"><span>Суммарная площадь кабелей:</span><span class="result-val" id="m4_area">0 мм²</span></div>
+            <div class="result-row"><span>Минимальная гофра по правилу 40%:</span><span class="result-val" id="m4_res">20 мм</span></div>
+        </div>
+        <p class="hint">Расчёт ориентировочный: использованы типовые наружные диаметры кабеля. Проверьте фактический диаметр и внутренний диаметр выбранной трубы.</p>
+    </div>
+
+    <div class="module-card" id="mod-4">
+        <h2 class="module-title">🔍 Штангенциркуль (Диаметр ➔ Сечение)</h2>
+        <div class="input-group"><label>Диаметр жилы (мм)</label><input type="number" id="m5_d" value="1.78" step="0.05" oninput="calcM5()"></div>
+        <div class="result-box"><div class="result-row"><span>Сечение:</span><span class="result-val" id="m5_res">2.49 мм² (ГОСТ 2.5)</span></div></div>
+    </div>
+
+    <div class="module-card" id="mod-5">
+        <h2 class="module-title">🌍 Контур заземления</h2>
+        <div class="grid-2">
+            <div class="input-group"><label>Грунт (Ом·м)</label><select id="m6_rho" onchange="calcM6()"><option value="100">Суглинок (100)</option><option value="500">Песок (500)</option></select></div>
+            <div class="input-group"><label>Цель (Ом)</label><input type="number" id="m6_t" value="4" oninput="calcM6()"></div>
+        </div>
+        <div class="result-box"><div class="result-row"><span>Электродов (3м):</span><span class="result-val" id="m6_res">3 шт.</span></div></div>
+    </div>
+
+    <div class="module-card" id="mod-6">
+        <h2 class="module-title">💡 Освещенность (СНиП)</h2>
+        <div class="grid-2">
+            <div class="input-group"><label>Площадь (м²)</label><input type="number" id="m7_a" value="20" oninput="calcM7()"></div>
+            <div class="input-group"><label>Норма (Лк)</label><select id="m7_l" onchange="calcM7()"><option value="150">Спальня (150)</option><option value="200" selected>Кухня (200)</option><option value="300">Кабинет (300)</option></select></div>
+        </div>
+        <div class="result-box"><div class="result-row"><span>Световой поток:</span><span class="result-val" id="m7_res">4000 Лм (~5 ламп LED)</span></div></div>
+    </div>
+
+    <div class="module-card" id="mod-7">
+        <h2 class="module-title">💰 Аудит энергопотребления</h2>
+        <div class="grid-2">
+            <div class="input-group"><label>Мощность (Вт)</label><input type="number" id="m8_w" value="2000" oninput="calcM8()"></div>
+            <div class="input-group"><label>Часов в сутки</label><input type="number" id="m8_h" value="5" oninput="calcM8()"></div>
+        </div>
+        <div class="result-box"><div class="result-row"><span>Стоимость в месяц:</span><span class="result-val" id="m8_res">0 руб</span></div></div>
+    </div>
+
+    <div class="module-card" id="mod-8">
+        <h2 class="module-title">🔥 Нагрев и потери в автомате</h2>
+        <div class="grid-2">
+            <div class="input-group"><label>Ток (А)</label><input type="number" id="m9_i" value="16" oninput="calcM9()"></div>
+            <div class="input-group"><label for="m9_cb">Автомат</label>
+                <div class="custom-select" id="m9_select_wrap">
+                    <button type="button" class="custom-select-trigger" id="m9_select_trigger" aria-haspopup="listbox" aria-expanded="false">
+                        <span id="m9_select_value">16 А</span><span class="select-chevron">⌄</span>
+                    </button>
+                    <div class="custom-select-menu" id="m9_select_menu" role="listbox" aria-label="Номинал автомата">
+                        <button type="button" class="custom-option selected" role="option" aria-selected="true" data-value="16"><span class="option-main">16 А</span><span class="option-sub">Стандартная групповая линия</span><span class="option-check">✓</span></button>
+                        <button type="button" class="custom-option" role="option" aria-selected="false" data-value="25"><span class="option-main">25 А</span><span class="option-sub">Требует проверки сечения кабеля</span><span class="option-check">✓</span></button>
+                    </div>
+                    <input type="hidden" id="m9_cb" value="16">
+                </div>
+            </div>
+        </div>
+        <div class="result-box"><div class="result-row"><span>Потери тепла:</span><span class="result-val" id="m9_res">1.33 Вт</span></div></div>
+    </div>
+
+    <div class="module-card" id="mod-9">
+        <h2 class="module-title">🎨 Цветовая маркировка по ГОСТ</h2>
+        <p style="font-size:0.75rem; line-height:1.6; color:var(--text-muted);">
+            • <strong>Фаза А:</strong> Коричневый<br>
+            • <strong>Фаза B:</strong> Черный<br>
+            • <strong>Фаза C:</strong> Серый<br>
+            • <strong>Нуль (N):</strong> Голубой / Синий<br>
+            • <strong>Заземление (PE):</strong> Желто-зеленый
+        </p>
+    </div>
+
+    <!-- МОДУЛЬ 11: КОНСТРУКТОР ЩИТА PRO -->
+    <div class="module-card" id="mod-10">
+      <h2 class="module-title">🛠️ Интерактивный конструктор электрощитка PRO</h2>
+      <p class="hint">Инженерный прототип: расчёт предварительный. Перед монтажом проверьте нормы, характеристики кабеля, аппаратов и параметры сети.</p>
+      <div class="grid-2 panel-settings">
+        <div class="input-group"><label for="panel_phases">Ввод сети</label><select id="panel_phases" onchange="rebuildPanel()"><option value="1">1 фаза · 230 В</option><option value="3">3 фазы · 400 В</option></select></div>
+        <div class="input-group"><label for="panel_rows">Ряды DIN-рейки</label><select id="panel_rows" onchange="renderPanel()"><option value="1">1 ряд</option><option value="2" selected>2 ряда</option><option value="3">3 ряда</option><option value="4">4 ряда</option></select></div>
+        <div class="input-group"><label for="panel_width">Модулей в ряду</label><select id="panel_width" onchange="renderPanel()"><option>12</option><option selected>18</option><option>24</option><option>36</option></select></div>
+        <div class="input-group"><label>Температура воздуха, °C</label><input id="panel_temp" type="number" value="30" min="-20" max="80" oninput="rebuildPanel()"></div><div class="input-group"><label>Коэффициент группировки (0–1)</label><input id="panel_group" type="number" value="1" min="0.1" max="1" step="0.05" oninput="rebuildPanel()"></div><div class="input-group"><label>Импеданс источника, Ом (если измерен)</label><input id="panel_z" type="number" min="0" step="0.01" placeholder="Неизвестен" oninput="rebuildPanel()"></div><div class="input-group"><label for="panel_reserve">Резерв корпуса</label><select id="panel_reserve" onchange="renderPanel()"><option value="0.1">10%</option><option value="0.2" selected>20%</option><option value="0.25">25%</option></select></div>
+      </div>
+      <div class="panel-actions"><button class="line-add-btn secondary" onclick="addPanelDevice()">＋ Добавить аппарат</button><button class="line-add-btn" onclick="autoDesignPanel()">⚡ Автопроектировать типовой щит</button><button class="line-add-btn secondary" onclick="addPanelLine('sockets')">＋ Добавить линию</button><button class="line-add-btn secondary" onclick="resetPanel()">Очистить проект</button></div>
+      <div class="panel-pro-grid">
+        <section class="panel-subcard"><h3>Добавить потребителя</h3><div class="preset-grid">
+          <button class="preset-card" onclick="addPanelLine('light')"><b>☼ Освещение</b><small>0,5 кВт · свет</small></button>
+          <button class="preset-card" onclick="addPanelLine('sockets')"><b>▣ Розетки комнат</b><small>2,5 кВт · группа</small></button>
+          <button class="preset-card" onclick="addPanelLine('kitchen')"><b>♨ Розетки кухни</b><small>3,5 кВт · кухня</small></button>
+          <button class="preset-card" onclick="addPanelLine('hob')"><b>▤ Варочная панель</b><small>7,2 кВт · силовая</small></button>
+          <button class="preset-card" onclick="addPanelLine('oven')"><b>▦ Духовой шкаф</b><small>3,5 кВт</small></button>
+          <button class="preset-card" onclick="addPanelLine('boiler')"><b>♨ Бойлер</b><small>2,0 кВт · влажная зона</small></button>
+          <button class="preset-card" onclick="addPanelLine('washer')"><b>◉ Стиральная машина</b><small>2,2 кВт · инвертор</small></button>
+          <button class="preset-card" onclick="addPanelLine('dishwasher')"><b>◉ Посудомоечная</b><small>2,0 кВт · инвертор</small></button>
+          <button class="preset-card" onclick="addPanelLine('ac')"><b>❄ Кондиционер</b><small>1,5 кВт · инвертор</small></button>
+          <button class="preset-card" onclick="addPanelLine('floor')"><b>⌁ Тёплый пол</b><small>1,5 кВт · нагрев</small></button>
+        </div><h3 style="margin-top:16px">Настройка выбранной линии</h3><div id="panelEditor" class="panel-editor"><p class="hint">Выберите линию на рейке.</p></div></section>
+        <section class="panel-subcard"><div class="panel-stats"><div><small>Позиции</small><strong id="panelCount">0</strong></div><div><small>Занято</small><strong id="panelUsed">0M</strong></div><div><small>Свободно</small><strong id="panelFree">36M</strong></div><div><small>Нагрузка</small><strong id="panelLoad">0 кВт</strong></div></div>
+          <div class="din-enclosure"><div class="din-heading"><b>DIN RAIL / BOARD</b><span id="panelDimensions">2 × 18M</span></div><div id="panelRails" class="panel-rails"></div></div>
+          <h3>Баланс фаз</h3><div id="phaseBalance" class="panel-audit"></div><h3>Однолинейная схема и назначение защит</h3><div id="panelDiagram" class="panel-diagram"></div><h3>Аудит безопасности</h3><div id="panelAudit" class="panel-audit"></div><h3>Ведомость оборудования</h3><div id="panelBOM" class="panel-bom"></div>
+          <div class="panel-actions"><button class="line-add-btn secondary" onclick="addPanelDevice()">＋ Аппарат</button><button class="line-add-btn secondary" onclick="addPanelDeviceType('terminal')">＋ Клеммник</button><button class="line-add-btn secondary" onclick="addPanelDeviceType('bus')">＋ Шина</button></div><div class="panel-actions"><button class="line-add-btn secondary" onclick="exportPanel()">⇩ Экспорт JSON</button><button class="line-add-btn secondary" onclick="document.getElementById('panelImport').click()">⇧ Импорт JSON</button><button class="line-add-btn secondary" onclick="window.print()">Печать / PDF</button><input hidden type="file" id="panelImport" accept="application/json,.json" onchange="importPanel(event)"></div>
+        </section>
+      </div>
+    </div>
+    <div class="module-card" id="mod-11"><h2 class="module-title">⌂ План помещений</h2><p class="hint">Схематичный план: точки размещаются условно. Для сметы кабеля требуются реальные трассы, высоты и обходы.</p><div class="panel-actions"><button class="line-add-btn" onclick="addRoom()">＋ Добавить помещение</button></div><div id="roomHost" class="room-grid"></div></div>
+    <script>
+        "use strict";
+        const $ = id => document.getElementById(id);
+        const num = (id, fallback=0) => {
+            const el = $(id), value = el ? Number(el.value) : fallback;
+            return Number.isFinite(value) ? value : fallback;
+        };
+        const fmt = (n, digits=2) => Number.isFinite(n) ? n.toLocaleString('ru-RU',{maximumFractionDigits:digits,minimumFractionDigits:digits}) : '—';
+
+        function switchModule(index) {
+            document.querySelectorAll('.module-card').forEach((card, idx) => card.classList.toggle('active', idx === index));
+            document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+                btn.classList.toggle('active', idx === index);
+                btn.setAttribute('aria-selected', idx === index ? 'true' : 'false');
+            });
+        }
+
+        function sumAppliances() {
+            const total = [...document.querySelectorAll('.appliance:checked')].reduce((sum, el) => sum + Number(el.value), 0);
+            $('m1_kw').value = total.toFixed(1);
+            calcM1();
+        }
+
+        function calcM1() {
+            const kw = Math.max(0, num('m1_kw'));
+            const phases = num('m1_phase',1);
+            const mat = $('m1_mat').value;
+            const pf = Math.min(1, Math.max(.1, num('m1_pf',.95)));
+            const voltage = phases === 3 ? 400 : 230;
+            const current = phases === 3 ? kw*1000/(Math.sqrt(3)*voltage*pf) : kw*1000/(voltage*pf);
+            // Preliminary selection only; installation method, grouping, ambient temperature and length must be verified.
+            const tables = mat === 'cu'
+                ? [{s:1.5,a:14},{s:2.5,a:20},{s:4,a:25},{s:6,a:32},{s:10,a:40},{s:16,a:63},{s:25,a:80}]
+                : [{s:2.5,a:16},{s:4,a:20},{s:6,a:25},{s:10,a:32},{s:16,a:50},{s:25,a:63},{s:35,a:80}];
+            const selected = tables.find(x => x.a >= current);
+            const breaker = selected ? [6,10,13,16,20,25,32,40,50,63,80].find(a=>a>=current && a<=selected.a) : null;
+            $('m1_res_s').textContent = selected ? `${selected.s} мм² (${mat==='cu'?'Cu':'Al'})` : 'Недостаточно данных';
+            $('m1_res_cb').textContent = breaker ? `${breaker} А (предварительно)` : 'Нужен инженерный расчёт';
+            let note = $('m1_note');
+            if (!note) {
+                note = document.createElement('p'); note.id='m1_note'; note.className='hint';
+                $('m1_res_cb').closest('.result-box').after(note);
+            }
+            note.textContent = `Расчётный ток: ${fmt(current,1)} А. Табличный выбор ориентировочный: способ прокладки, температура, группировка, длина и условия отключения могут изменить сечение и автомат.`;
+        }
+
+        function calcM2() {
+            const l = Math.max(0,num('m2_l')), i = Math.max(0,num('m2_i'));
+            const s = Math.max(.1,num('m2_s',2.5)), rho = 0.0178;
+            const phases = num('m2_phase',1), voltage = phases===3 ? 400 : 230;
+            const v = phases===3 ? Math.sqrt(3)*i*l*rho/s : 2*i*l*rho/s;
+            const pct = voltage ? v/voltage*100 : 0;
+            $('m2_res').textContent = `${fmt(v)} В (${fmt(pct,1)}%)`;
+            const limit = num('m2_use',5);
+            $('m2_alert').textContent = pct > limit ? `Превышен ориентир ${limit}%` : `В пределах ориентира ${limit}%`;
+            $('m2_alert').style.color = pct > limit ? '#fca5a5' : '#6ee7b7';
+        }
+
+        function calcM3() {
+            const l=Math.max(0,num('m3_l')), s=Math.max(.1,num('m3_s',2.5));
+            const rho=num('m3_mat',0.0178), zSource=Math.max(0,num('m3_z',.35));
+            const zLine=2*l*rho/s, zTotal=zSource+zLine;
+            const ikz=zTotal>0?230/zTotal:Infinity, breaking=num('m3_breaker',6)*1000;
+            $('m3_res').textContent = Number.isFinite(ikz) ? `${fmt(ikz,0)} А` : 'Проверьте параметры';
+            $('m3_check').textContent = Number.isFinite(ikz) ? (ikz<=breaking?'Отключающая способность выше расчётного тока':'Требуется аппарат с большей отключающей способностью') : '—';
+        }
+
+        function calcM4() {
+            const counts=[num('m4_1'),num('m4_2'),num('m4_3'),num('m4_4')].map(v=>Math.max(0,Math.floor(v)));
+            const diameters=[8.0,9.0,10.0,11.5];
+            const area=counts.reduce((sum,n,i)=>sum+n*Math.PI*diameters[i]**2/4,0);
+            $('m4_area').textContent=`${fmt(area)} мм²`;
+            const sizes=[{d:16,id:10.5},{d:20,id:13.5},{d:25,id:18.0},{d:32,id:24.0},{d:40,id:31.0}];
+            const pipe=sizes.find(p=>Math.PI*p.id*p.id/4*.4>=area);
+            $('m4_res').textContent=pipe?`${pipe.d} мм`:'Более 40 мм / несколько труб';
+        }
+
+        function calcM5() {
+            const d=Math.max(0,num('m5_d')), s=Math.PI*d*d/4;
+            const common=[1.5,2.5,4,6,10,16];
+            const nearest=common.reduce((a,b)=>Math.abs(b-s)<Math.abs(a-s)?b:a,common[0]);
+            $('m5_res').textContent=`${fmt(s)} мм² (ближайшее номинальное: ${nearest} мм²; измерение не заменяет проверку сопротивления жилы)`;
+        }
+
+        function calcM6() {
+            const rho=Math.max(1,num('m6_rho',100)), target=Math.max(.1,num('m6_t',4));
+            // Very rough estimate only; soil layers, spacing, seasonal changes and bonding are not modeled.
+            const resistanceOne = rho/(2*Math.PI*3)*Math.log(4*3/.016);
+            const cnt=Math.max(3,Math.ceil(resistanceOne/target));
+            $('m6_res').textContent=`${cnt} шт. (грубая оценка)`;
+        }
+
+        function calcM7() {
+            const area=Math.max(0,num('m7_a')), lux=Math.max(0,num('m7_l',150));
+            const lm=area*lux/.7; // rough allowance for utilization/maintenance
+            $('m7_res').textContent=`${Math.ceil(lm)} Лм (~${Math.ceil(lm/800)} ламп по 800 Лм)`;
+        }
+
+        function calcM8() {
+            const w=Math.max(0,num('m8_w')), h=Math.max(0,num('m8_h'));
+            const tariff=Math.max(0,num('m8_tariff',0));
+            const day=w*h/1000, month=day*30, year=day*365;
+            $('m8_res').textContent=`${fmt(month*tariff)} руб./мес.`;
+            let detail=$('m8_detail');
+            if(!detail){detail=document.createElement('div');detail.id='m8_detail';detail.className='hint';$('m8_res').closest('.result-box').append(detail);}
+            detail.textContent=`Энергия: ${fmt(day)} кВт·ч/сутки · ${fmt(month)} кВт·ч/мес. · ${fmt(year)} кВт·ч/год. Годовая стоимость: ${fmt(year*tariff)} руб.`;
+        }
+
+        function calcM9() {
+            const i=Math.max(0,num('m9_i')), cb=Math.max(1,num('m9_cb'));
+            const r=.0052, p=i*i*r;
+            $('m9_res').textContent=`${fmt(p)} Вт`;
+            let detail=$('m9_detail');
+            if(!detail){detail=document.createElement('div');detail.id='m9_detail';detail.className='hint';$('m9_res').closest('.result-box').append(detail);}
+            detail.textContent=`Условная оценка при R=${r} Ом. Ток ${fmt(i,1)} А относительно автомата ${cb} А. Фактические потери зависят от модели, температуры и состояния контактов.`;
+        }
+
+        // Add tariff field and additional result details without external dependencies.
+        const m8grid=$('m8_h')?.closest('.grid-2');
+        if(m8grid && !$('m8_tariff')) {
+            const wrap=document.createElement('div'); wrap.className='input-group';
+            wrap.innerHTML='<label for="m8_tariff">Ваш тариф (руб./кВт·ч; по умолчанию 0)</label><input type="number" id="m8_tariff" value="0" min="0" step="0.01" oninput="calcM8()">';
+            m8grid.appendChild(wrap);
+        }
+
+        let userShieldLines=[]; let selectedPanelItem=null;
+        const panelCatalog={
+          light:{name:'Освещение',kw:.5,len:20,wet:false,inv:false,zone:'Свет'},sockets:{name:'Розетки комнат',kw:2.5,len:25,wet:false,inv:false,zone:'Розетки'},kitchen:{name:'Розетки кухни',kw:3.5,len:20,wet:false,inv:false,zone:'Кухня'},hob:{name:'Варочная панель',kw:7.2,len:15,wet:false,inv:false,zone:'Силовая'},oven:{name:'Духовой шкаф',kw:3.5,len:15,wet:false,inv:false,zone:'Силовая'},boiler:{name:'Бойлер',kw:2,len:15,wet:true,inv:false,zone:'Влажная'},washer:{name:'Стиральная машина',kw:2.2,len:20,wet:true,inv:true,zone:'Влажная'},dishwasher:{name:'Посудомоечная машина',kw:2,len:20,wet:true,inv:true,zone:'Влажная'},ac:{name:'Кондиционер',kw:1.5,len:20,wet:false,inv:true,zone:'Климат'},floor:{name:'Тёплый пол',kw:1.5,len:15,wet:true,inv:false,zone:'Нагрев'}
+        };
+        const panelCableTable=[{s:1.5,cu:16,al:0},{s:2.5,cu:21,al:16},{s:4,cu:27,al:21},{s:6,cu:34,al:26},{s:10,cu:46,al:35},{s:16,cu:61,al:47},{s:25,cu:80,al:62},{s:35,cu:99,al:77}];
+        function panelId(){return 'p'+Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+        function newPanelLine(key='sockets'){const p=panelCatalog[key]||panelCatalog.sockets;const x={id:panelId(),kind:'line',key,name:p.name,kw:p.kw,length:p.len,phases:1,material:'Cu',method:'B',curve:'C',wet:p.wet,inverter:p.inv,zone:p.zone,rcdMode:p.wet?'individual':'group',section:2.5,breaker:16,modules:1};calcPanelLine(x);return x}
+        function newPanelProtection(type,name,amp,ma,modules){return {id:panelId(),kind:'protection',type,name,amp,ma,modules,zone:'Защита',kw:0}}
+        function calcPanelLine(x){const v=x.phases===3?400:230,pf=.95;x.current=x.phases===3?x.kw*1000/(Math.sqrt(3)*v*pf):x.kw*1000/(v*pf);const mat=x.material==='Cu'?'cu':'al';let row=panelCableTable.find(r=>r[mat]>=x.current);if(!row)row=panelCableTable[panelCableTable.length-1];if(x.material==='Al'&&row.al===0)row=panelCableTable.find(r=>r.al>=x.current)||panelCableTable[panelCableTable.length-1];x.section=row.s;const standard=[6,10,13,16,20,25,32,40,50,63];const available=standard.filter(a=>a<=row[mat]);x.breaker=available.find(a=>a>=x.current)||available[available.length-1]||6;const rho=x.material==='Cu'?.0178:.0282;x.drop=(x.phases===3?Math.sqrt(3):2)*x.current*x.length*rho/x.section;x.dropPct=x.drop/v*100;x.dropLimit=x.zone==='Свет'?3:5;x.ik=230/(.35+2*x.length*rho/x.section);return x}
+        function addPanelLine(key){const x=newPanelLine(key);userShieldLines.push(x);selectedPanelItem=x.id;rebuildPanel()}
+        function addShieldLine(name,zone,zoneName,cable,cb,hasInverter,isWet){const key=Object.keys(panelCatalog).find(k=>panelCatalog[k].name===name)||'sockets';const x=newPanelLine(key);x.name=name;x.zone=zoneName||zone;x.inverter=!!hasInverter;x.wet=!!isWet;userShieldLines.push(x);selectedPanelItem=x.id;rebuildPanel()}
+        function autoDesignPanel(){if(!userShieldLines.some(x=>x.kind==='line'))['light','sockets','sockets','kitchen','hob','oven','boiler','washer','dishwasher'].forEach(k=>userShieldLines.push(newPanelLine(k)));const lines=userShieldLines.filter(x=>x.kind==='line');if(!userShieldLines.some(x=>x.type==='main'))userShieldLines.unshift(newPanelProtection('main','Вводной выключатель',40,null,Number($('panel_phases')?.value||1)===3?4:2));if(lines.some(x=>x.wet||x.inverter)&&!userShieldLines.some(x=>x.type==='rcd'))userShieldLines.splice(1,0,newPanelProtection('rcd','УЗО тип A · 30 мА',40,30,2));lines.filter(x=>x.wet).forEach(line=>{if(!userShieldLines.some(x=>x.protectedId===line.id)){const item=newPanelProtection('rcbo','Дифавтомат · '+line.name,line.breaker,30,2);item.protectedId=line.id;userShieldLines.splice(userShieldLines.indexOf(line)+1,0,item)}});selectedPanelItem=lines[0]?.id||null;rebuildPanel()}
+        function resetPanel(){userShieldLines=[];selectedPanelItem=null;rebuildPanel()}
+        function removePanelItem(id){userShieldLines=userShieldLines.filter(x=>x.id!==id&&x.protectedId!==id);if(selectedPanelItem===id)selectedPanelItem=null;rebuildPanel()}
+        function updatePanelLine(id,field,val){const x=userShieldLines.find(y=>y.id===id&&y.kind==='line');if(!x)return;if(['name','material','method','curve','rcdMode'].includes(field))x[field]=val;else x[field]=Number(val);if(field==='phases'&&Number($('panel_phases').value)===1&&x.phases===3){}calcPanelLine(x);userShieldLines.filter(y=>y.protectedId===id).forEach(y=>y.amp=x.breaker);rebuildPanel()}
+        function rebuildPanel(){userShieldLines.filter(x=>x.kind==='line').forEach(calcPanelLine);renderPanelEditor();renderPanel();renderPanelAudit();renderPanelDiagram();renderPanelBOM()}
+        function renderPanelEditor(){const host=$('panelEditor');if(!host)return;const x=userShieldLines.find(y=>y.id===selectedPanelItem&&y.kind==='line');if(!x){host.innerHTML='<p class="hint">Выберите линию на DIN-рейке, чтобы изменить её параметры.</p>';return}host.innerHTML='';const grid=document.createElement('div');grid.className='panel-editor-grid';const fields=[['Название','name',x.name,'text'],['Мощность, кВт','kw',x.kw,'number'],['Длина, м','length',x.length,'number'],['Фазы','phases',x.phases,'select',[['1','1 фаза · 230 В'],['3','3 фазы · 400 В']]],['Материал','material',x.material,'select',[['Cu','Медь'],['Al','Алюминий']]],['Прокладка','method',x.method,'select',[['A','Теплоизоляция/труба'],['B','Труба/короб'],['C','Открыто']]],['Кривая','curve',x.curve,'select',[['B','B'],['C','C'],['D','D']]],['Дифф. защита','rcdMode',x.rcdMode,'select',[['group','Групповое УЗО'],['individual','Индивидуальная'],['none','Не назначена']]]];fields.forEach(([label,key,val,type,opts])=>{const w=document.createElement('div');const l=document.createElement('label');l.textContent=label;w.appendChild(l);let el;if(type==='select'){el=document.createElement('select');opts.forEach(([v,t])=>{const o=document.createElement('option');o.value=v;o.textContent=t;el.appendChild(o)});el.value=String(val)}else{el=document.createElement('input');el.type=type;el.value=val;if(type==='number'){el.min='0';el.step='any'}}el.onchange=()=>updatePanelLine(x.id,key,el.value);w.appendChild(el);grid.appendChild(w)});host.appendChild(grid);const sum=document.createElement('div');sum.className='panel-summary';sum.textContent=`Ток ${fmt(x.current,2)} А · предварительный кабель ${x.phases===3?'5':'3'}×${x.section} мм² ${x.material} · автомат ${x.breaker} А · падение ${fmt(x.dropPct,2)}% · оценка Iкз ${fmt(x.ik,0)} А`;host.appendChild(sum);const actions=document.createElement('div');actions.className='panel-actions';const dup=document.createElement('button');dup.className='line-add-btn secondary';dup.textContent='Дублировать';dup.onclick=()=>{const y={...x,id:panelId(),name:x.name+' (копия)'};userShieldLines.push(y);selectedPanelItem=y.id;rebuildPanel()};const del=document.createElement('button');del.className='line-add-btn secondary';del.textContent='Удалить линию';del.onclick=()=>removePanelItem(x.id);actions.append(dup,del);host.appendChild(actions)}
+        function movePanelItem(source,target){if(!source||source===target)return;const a=userShieldLines.findIndex(x=>x.id===source),b=userShieldLines.findIndex(x=>x.id===target);if(a<0||b<0)return;const [item]=userShieldLines.splice(a,1);userShieldLines.splice(userShieldLines.findIndex(x=>x.id===target),0,item);rebuildPanel()}
+        function renderPanel(){const host=$('panelRails');if(!host)return;const rows=Number($('panel_rows')?.value||2),width=Number($('panel_width')?.value||18),capacity=rows*width,used=userShieldLines.reduce((a,x)=>a+(x.modules||1),0);$('panelCount').textContent=userShieldLines.length;$('panelUsed').textContent=used+'M';$('panelFree').textContent=Math.max(0,capacity-used)+'M';$('panelLoad').textContent=fmt(userShieldLines.filter(x=>x.kind==='line').reduce((a,x)=>a+x.kw,0),1)+' кВт';$('panelDimensions').textContent=`${rows} × ${width}M`;host.innerHTML='';for(let r=0;r<rows;r++){const row=document.createElement('div');row.className='panel-rail-row';const label=document.createElement('div');label.className='panel-rail-label';label.innerHTML=`<span>РЯД ${r+1}</span><span>${width}M</span>`;row.appendChild(label);const rail=document.createElement('div');rail.className='panel-rail';let usedRow=0;userShieldLines.filter((x,i)=>Math.floor(i/width)===r).forEach(x=>{const d=document.createElement('button');d.type='button';d.className='panel-device '+(x.kind==='protection'?'protection ':'')+(x.id===selectedPanelItem?'selected':'');d.style.setProperty('--w',x.modules||1);d.title=x.name;const mark=document.createElement('span');mark.className='switch-mark';const name=document.createElement('small');name.textContent=x.name.length>18?x.name.slice(0,17)+'…':x.name;const rate=document.createElement('em');rate.textContent=x.kind==='line'?x.breaker+'A':(x.amp||'')+'A'+(x.ma?'/'+x.ma:'');d.append(mark,name,rate);d.onclick=()=>{if(x.kind==='line'){selectedPanelItem=x.id;renderPanelEditor();renderPanel()}};rail.appendChild(d);usedRow+=x.modules||1});const remain=Math.max(0,width-usedRow);if(remain){const e=document.createElement('div');e.className='rail-empty';e.style.flex=`${remain} 0 22px`;e.textContent=`${remain}M свободно`;rail.appendChild(e)}row.appendChild(rail);host.appendChild(row)}}
+        function renderPanelAudit(){const host=$('panelAudit');if(!host)return;host.innerHTML='';const lines=userShieldLines.filter(x=>x.kind==='line'),msgs=[];if(!lines.length)msgs.push(['','Добавьте линии или используйте автопроектирование.']);if(lines.some(x=>x.phases===3)&&Number($('panel_phases').value)===1)msgs.push(['error','Трёхфазная линия при однофазном вводе: проверьте конфигурацию.']);if(lines.some(x=>x.wet)&&!userShieldLines.some(x=>x.kind==='protection'&&(x.type==='rcd'||x.type==='rcbo')))msgs.push(['warn','Влажные зоны: назначьте дифференциальную защиту. Уставка и тип выбираются по нормам, системе заземления и требованиям оборудования.']);if(lines.some(x=>x.inverter)&&!userShieldLines.some(x=>x.kind==='protection'&&/тип A/.test(x.name)))msgs.push(['warn','Инверторная нагрузка: проверьте паспорт оборудования — может требоваться тип A, F или B.']);lines.forEach(x=>{if(x.dropPct>x.dropLimit)msgs.push(['warn',`${x.name}: падение напряжения ${fmt(x.dropPct,1)}% выше ориентира ${x.dropLimit}%.`]);if(x.current>x.breaker)msgs.push(['error',`${x.name}: рабочий ток выше выбранного номинала автомата.`]);if(x.ik>6000)msgs.push(['warn',`${x.name}: грубая оценка тока КЗ ${fmt(x.ik,0)} А; нужна проверка петли и отключающей способности.`]);if(x.method==='A')msgs.push(['warn',`${x.name}: выбран сложный способ прокладки; допустимый ток нужно проверить по таблице для конкретного кабеля и условий.`])});msgs.push(['warn','Расчёт кабеля и тока КЗ предварительный: не учтены все поправочные коэффициенты, фактическая петля, температура, группировка, гармоники и паспортные характеристики аппаратов. Селективность не подтверждается автоматически.']);msgs.forEach(([t,txt])=>{const d=document.createElement('div');d.className='panel-message '+t;d.textContent=txt;host.appendChild(d)})}
+        function renderPanelDiagram(){const host=$('panelDiagram');if(!host)return;host.innerHTML='';const row=document.createElement('div');row.className='diagram-row';const parts=[Number($('panel_phases').value)===3?'Ввод 3Ф · 400 В':'Ввод 1Ф · 230 В',userShieldLines.find(x=>x.type==='main')?.name||'Вводной аппарат не задан',`${userShieldLines.filter(x=>x.type==='rcd'||x.type==='rcbo').length} УЗО/дифзащиты`,`${userShieldLines.filter(x=>x.kind==='line').length} отходящих линий`];parts.forEach((t,i)=>{if(i){const a=document.createElement('span');a.className='diagram-arrow';a.textContent='→';row.appendChild(a)}const d=document.createElement('div');d.className='diagram-node'+(i===0?' primary':'');d.textContent=t;row.appendChild(d)});host.appendChild(row)}
+        function renderPanelBOM(){const host=$('panelBOM');if(!host)return;host.innerHTML='';const counts=new Map();userShieldLines.forEach(x=>{const key=x.kind==='line'?`Автомат ${x.breaker} А, кривая ${x.curve}`:x.name;counts.set(key,(counts.get(key)||0)+1)});const modules=userShieldLines.reduce((a,x)=>a+(x.modules||1),0),reserve=Math.ceil(modules*Number($('panel_reserve').value||.2));counts.set('Корпус щита (предварительно)',1);counts.set(`Резерв модулей ${Math.round(Number($('panel_reserve').value)*100)}%`,reserve);counts.forEach((n,k)=>{const r=document.createElement('div');r.className='panel-bom-row';const a=document.createElement('span');a.textContent=k;const b=document.createElement('span');b.textContent=n+' шт.';r.append(a,b);host.appendChild(r)})}
+        function exportPanel(){const data={schema:'electrik-pro-panel-v1',savedAt:new Date().toISOString(),settings:{phases:$('panel_phases').value,rows:$('panel_rows').value,width:$('panel_width').value,reserve:$('panel_reserve').value},items:userShieldLines};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='electrik-pro-panel.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+        function importPanel(e){const file=e.target.files?.[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const d=JSON.parse(reader.result);if(d.schema!=='electrik-pro-panel-v1'||!Array.isArray(d.items))throw Error('Неверный формат проекта');userShieldLines=d.items.filter(x=>x&&typeof x.id==='string');if(d.settings){$('panel_phases').value=d.settings.phases||'1';$('panel_rows').value=d.settings.rows||'2';$('panel_width').value=d.settings.width||'18';$('panel_reserve').value=d.settings.reserve||'.2'}selectedPanelItem=userShieldLines.find(x=>x.kind==='line')?.id||null;rebuildPanel()}catch(err){alert('Не удалось загрузить проект: '+err.message)}e.target.value=''};reader.readAsText(file)}
+        function removeShieldLine(id){removePanelItem(id)}function renderShield(){rebuildPanel()}function renderAudit(){renderPanelAudit()}
+        // PRO v2: единая модель связей, расчёта, размещения и ведомости.
+        const proAmp=[6,10,13,16,20,25,32,40,50,63,80,100,125,160,200,250];
+        const proSections=[1.5,2.5,4,6,10,16,25,35,50,70,95,120,150,185,240];
+        const proExtendedCable={50:{cu:119,al:91},70:{cu:151,al:117},95:{cu:182,al:143},120:{cu:210,al:165},150:{cu:240,al:188},185:{cu:273,al:215},240:{cu:321,al:253}};
+        const proEsc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        const proInput=(id)=>{const e=$(id);return e&&e.value.trim()!==''&&Number.isFinite(Number(e.value))?Number(e.value):null};
+        function proDevice(type='mcb',name='Автомат') {return {id:panelId(),kind:'protection',type,name,amp:16,curve:'C',poles:1,modules:1,ma:30,rcdType:'A',breaking:6,zone:'Защита'};}
+        function addPanelDevice(){const x=proDevice();userShieldLines.push(x);selectedPanelItem=x.id;rebuildPanel()}
+        function addPanelDeviceType(type){const x=proDevice(type,type==='terminal'?'Клеммник':'Шинный блок');x.modules=type==='terminal'?1:2;userShieldLines.push(x);selectedPanelItem=x.id;rebuildPanel()}
+        function proSettings(){return {phases:Number($('panel_phases').value),rows:Number($('panel_rows').value),width:Number($('panel_width').value),reserve:Number($('panel_reserve').value),temp:proInput('panel_temp'),group:proInput('panel_group'),z:proInput('panel_z')}}
+        function proNormalize(x){if(x.kind==='line'){
+            x.kw=Number(x.kw);x.length=Number(x.length);x.phases=Number(x.phases)||1;x.voltage=Number(x.voltage)|| (x.phases===3?400:230);
+            x.pf=x.pf===undefined?.95:Number(x.pf);x.method=x.method||'B';x.material=x.material||'Cu';x.curve=x.curve||'C';x.rcdMode=x.rcdMode||'none';
+            x.groupId=x.groupId||'';x.protectedId=x.protectedId||'';x.manualSection=!!x.manualSection;x.manualBreaker=!!x.manualBreaker;
+            x.breaking=Number(x.breaking)||6;x.ambientFactor=1;x.groupFactor=1;x.modules=x.phases===3?3:1;x.phase=x.phases===3?'L1/L2/L3':(['L1','L2','L3'].includes(x.phase)?x.phase:'L1');
+        }else {x.type=x.type||'mcb';x.amp=Number(x.amp)||16;x.poles=Number(x.poles)||1;x.modules=Number(x.modules)||x.poles;x.breaking=Number(x.breaking)||6;x.ma=Number(x.ma)||30;x.rcdType=x.rcdType||'A';x.curve=x.curve||'C';}return x}
+        function proCalc(x,st){proNormalize(x);const issues=[];if(!Number.isFinite(x.kw)||x.kw<0||!Number.isFinite(x.length)||x.length<0||x.pf<=0||x.pf>1||x.voltage<=0)issues.push('Некорректные мощность, длина, напряжение или cos φ.');
+            const I=issues.length?NaN:x.kw*1000/(x.phases===3?Math.sqrt(3)*x.voltage*x.pf:x.voltage*x.pf);x.current=I;
+            const temp=st.temp,group=st.group;
+            const tf=temp===null||temp>80||temp< -20?NaN:Math.sqrt(Math.max(0,(70-temp)/40));
+            const gf=group!==null&&group>0&&group<=1?group:NaN;
+            const methodFactor={A:.75,B:1,C:1.12}[x.method];
+            const mat=x.material==='Cu'?'cu':'al';
+            const rho=x.material==='Cu'?.0178:.0282;
+            const limit=x.zone==='Свет'?3:5;
+            const rowFor=s=>panelCableTable.find(r=>r.s===s)||(proExtendedCable[s]?{s,...proExtendedCable[s]}:null);
+            const iz=s=>{const r=rowFor(s);return r&&Number.isFinite(tf*gf*methodFactor)?r[mat]*tf*gf*methodFactor:NaN};
+            const drop=s=>{const delta=(x.phases===3?Math.sqrt(3):2)*I*x.length*rho/s;return {volts:delta,pct:delta/x.voltage*100}};
+            const valid=proSections.filter(s=>Number.isFinite(I)&&iz(s)>=I&&drop(s).pct<=limit&&proAmp.some(a=>a>=I&&a<=iz(s)));
+            const proposed=valid[0]||null;
+            if(!x.manualSection)x.section=proposed;
+            if(!proSections.includes(Number(x.section)))issues.push('Не найдено подходящее сечение: проверьте мощность, способ прокладки и возможность разделить линию.');
+            x.iz=iz(Number(x.section));const d=x.section?drop(x.section):{volts:NaN,pct:NaN};x.drop=d.volts;x.dropPct=d.pct;x.dropLimit=limit;
+            const suggested=proAmp.find(a=>a>=I&&a<=x.iz)||null;
+            if(!x.manualBreaker)x.breaker=suggested;
+            if(!proAmp.includes(Number(x.breaker)))issues.push('Номинал защиты не подобран: ток превышает допустимый диапазон или отсутствует подходящий кабель.');
+            if(Number.isFinite(I)&&Number.isFinite(x.breaker)&&I>x.breaker)issues.push('Рабочий ток превышает номинал автомата.');
+            if(Number.isFinite(x.iz)&&Number.isFinite(x.breaker)&&x.breaker>x.iz)issues.push('Номинал автомата превышает скорректированный допустимый ток кабеля.');
+            if(Number.isFinite(x.dropPct)&&x.dropPct>limit)issues.push('Падение напряжения выше выбранного ориентира.');
+            if(!Number.isFinite(tf)||!Number.isFinite(gf))issues.push('Укажите допустимые температуру и коэффициент группировки.');
+            if(!methodFactor)issues.push('Неизвестный способ прокладки.');
+            x.ik=st.z!==null&&st.z>=0&&x.section?230/(st.z+2*x.length*rho/x.section):null;
+            if(x.ik!==null&&x.ik>Number(x.breaking)*1000)issues.push('Ожидаемый ток КЗ превышает отключающую способность автомата.');
+            x.issues=issues;return x}
+        function proConnections(){const lines=[...new Map(userShieldLines.filter(x=>x.kind==='line').map(x=>[x.id,x])).values()];const dev=userShieldLines.filter(x=>x.kind==='protection');const main=dev.find(x=>x.type==='main');return lines.map(x=>{let protection=null,problem='';if(x.rcdMode==='individual')protection=dev.find(d=>d.type==='rcbo'&&d.protectedId===x.id);else if(x.rcdMode==='group')protection=dev.find(d=>d.type==='rcd'&&d.id===x.groupId);if(x.rcdMode!=='none'&&!protection)problem='Назначенная дифференциальная защита отсутствует.';return {line:x,main,protection,problem}})}
+        function proLayout(){const st=proSettings(),rails=Array.from({length:st.rows},()=>[]),overflow=[];let r=0,used=0;for(const x of userShieldLines){const w=Number(x.modules)||1;if(w>st.width){overflow.push(x);continue}if(used+w>st.width){r++;used=0}if(r>=st.rows){overflow.push(x);continue}rails[r].push(x);used+=w}return {rails,overflow,used:userShieldLines.reduce((a,x)=>a+(Number(x.modules)||1),0),capacity:st.rows*st.width}}
+        function rebuildPanel(){const st=proSettings();userShieldLines.forEach(x=>x.kind==='line'?proCalc(x,st):proNormalize(x));renderPanelEditor();renderPanel();renderPanelAudit();renderPanelDiagram();renderPanelBOM();renderPhaseBalance();renderRooms()}
+        function proField(x,key,label,options){const w=document.createElement('div'),l=document.createElement('label');l.textContent=label;w.appendChild(l);let el;if(options){el=document.createElement('select');for(const [v,t] of options){const o=document.createElement('option');o.value=v;o.textContent=t;el.appendChild(o)}}else{el=document.createElement('input');el.type=['name'].includes(key)?'text':'number';if(el.type==='number'){el.step='any';el.min='0'}}el.value=x[key]??'';el.addEventListener(el.type==='text'?'change':'change',()=>{let v=el.value;if(el.type==='number')v=v===''?NaN:Number(v);x[key]=v;if(key==='section')x.manualSection=true;if(key==='breaker')x.manualBreaker=true;if(key==='phases'){x.modules=Number(v)===3?3:1;x.voltage=Number(v)===3?400:230}rebuildPanel()});w.appendChild(el);return w}
+        function renderPanelEditor(){const host=$('panelEditor');if(!host)return;const x=userShieldLines.find(x=>x.id===selectedPanelItem);host.innerHTML='';if(!x){host.textContent='Выберите линию или аппарат на DIN-рейке.';return}const grid=document.createElement('div');grid.className='panel-editor-grid';const add=(k,t,o)=>grid.appendChild(proField(x,k,t,o));const opt=(...a)=>a.map(v=>[String(v),String(v)]);
+          add('name','Название');if(x.kind==='line'){
+          add('kw','Мощность, кВт');add('phase','Фаза линии',[['L1','L1'],['L2','L2'],['L3','L3'],['L1/L2/L3','L1/L2/L3 (3Ф)']]);add('phases','Фазы',[['1','1 фаза'],['3','3 фазы']]);add('voltage','Напряжение, В');add('pf','cos φ');add('length','Длина, м');add('material','Материал',[['Cu','Медь'],['Al','Алюминий']]);add('method','Прокладка',[['A','A (ориентир)'],['B','B (ориентир)'],['C','C (ориентир)']]);add('zone','Тип нагрузки',[['Свет','Освещение'],['Розетки','Розетки'],['Силовая','Силовая'],['Влажная','Влажная'],['Климат','Климат'],['Нагрев','Нагрев']]);add('section','Сечение, мм²',proSections.map(v=>[String(v),String(v)]));add('breaker','Автомат, А',proAmp.map(v=>[String(v),String(v)]));add('curve','Характеристика',opt('B','C','D'));add('breaking','Отключающая способность, кА',opt(4.5,6,10,15));add('rcdMode','Дифференциальная защита',[['none','Не назначена'],['group','Групповое УЗО'],['individual','Дифавтомат']]);if(x.rcdMode==='group')add('groupId','ID группового УЗО',userShieldLines.filter(y=>y.type==='rcd').map(y=>[y.id,y.name]));
+          }else{add('type','Тип аппарата',[['main','Вводной выключатель'],['mcb','Автомат'],['rcd','УЗО'],['rcbo','Дифавтомат'],['spd','УЗИП'],['terminal','Клеммник'],['bus','Шинный блок'],['other','Другой аппарат']]);add('amp','Номинал, А',proAmp.map(v=>[String(v),String(v)]));add('poles','Полюсов',opt(1,2,3,4));add('modules','Ширина, M',opt(1,2,3,4,6,8));add('curve','Характеристика',opt('B','C','D'));add('ma','Дифференциальный ток, мА',opt(10,30,100,300));add('rcdType','Тип диф. защиты',opt('AC','A','F','B'));add('breaking','Отключающая способность, кА',opt(4.5,6,10,15));if(x.type==='rcbo')add('protectedId','Защищаемая линия',userShieldLines.filter(y=>y.kind==='line').map(y=>[y.id,y.name]));}
+          host.appendChild(grid);if(x.kind==='line'){const summary=document.createElement('div');summary.className='panel-summary';summary.textContent=`Iб ${fmt(x.current,1)} А · Iz ${fmt(x.iz,1)} А · кабель ${x.section??'—'} мм² · автомат ${x.breaker??'—'} А · ΔU ${fmt(x.dropPct,2)}% · Iкз ${x.ik===null?'не определён':fmt(x.ik,0)+' А'}`;host.appendChild(summary);const btn=document.createElement('button');btn.className='line-add-btn secondary';btn.textContent='Вернуть автоматический подбор кабеля и автомата';btn.onclick=()=>{x.manualSection=false;x.manualBreaker=false;rebuildPanel()};host.appendChild(btn)}const actions=document.createElement('div');actions.className='panel-actions';for(const [name,fn] of [['Дублировать',()=>{const y={...x,id:panelId(),name:x.name+' (копия)'};userShieldLines.push(y);selectedPanelItem=y.id;rebuildPanel()}],['Удалить',()=>removePanelItem(x.id)]]){const b=document.createElement('button');b.className='line-add-btn secondary';b.textContent=name;b.onclick=fn;actions.appendChild(b)}host.appendChild(actions)}
+        function movePanelItem(source,target){if(!source||source===target)return;const a=userShieldLines.findIndex(x=>x.id===source),b=userShieldLines.findIndex(x=>x.id===target);if(a<0||b<0)return;const [item]=userShieldLines.splice(a,1);userShieldLines.splice(userShieldLines.findIndex(x=>x.id===target),0,item);rebuildPanel()}
+        function renderPanel(){const host=$('panelRails');if(!host)return;const st=proSettings(),lay=proLayout();$('panelCount').textContent=userShieldLines.length;$('panelUsed').textContent=lay.used+'M';$('panelFree').textContent=Math.max(0,lay.capacity-lay.used)+'M';$('panelLoad').textContent=fmt(userShieldLines.filter(x=>x.kind==='line').reduce((a,x)=>a+(Number.isFinite(x.kw)?x.kw:0),0),1)+' кВт';$('panelDimensions').textContent=`${st.rows} × ${st.width}M`;host.innerHTML='';lay.rails.forEach((items,i)=>{const outer=document.createElement('div');outer.className='panel-rail-row';const lbl=document.createElement('div');lbl.className='panel-rail-label';lbl.textContent=`РЯД ${i+1} · ${items.reduce((a,x)=>a+x.modules,0)}/${st.width}M`;outer.appendChild(lbl);const rail=document.createElement('div');rail.className='panel-rail';for(const x of items){const b=document.createElement('button');b.draggable=true;b.dataset.id=x.id;b.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',x.id)});b.addEventListener('dragover',e=>e.preventDefault());b.addEventListener('drop',e=>{e.preventDefault();movePanelItem(e.dataTransfer.getData('text/plain'),x.id)});b.className='panel-device '+(x.kind==='protection'?'protection ':'')+(selectedPanelItem===x.id?'selected':'');b.style.setProperty('--w',x.modules);b.title=x.name+' · '+x.modules+'M';const mark=document.createElement('span');mark.className='switch-mark';const label=document.createElement('small');label.textContent=x.name;const rate=document.createElement('em');rate.textContent=(x.kind==='line'?x.breaker:x.amp)+'A · '+x.modules+'M';b.append(mark,label,rate);b.onclick=()=>{selectedPanelItem=x.id;renderPanelEditor();renderPanel()};rail.appendChild(b)}const rem=st.width-items.reduce((a,x)=>a+x.modules,0);if(rem>0){const e=document.createElement('div');e.className='rail-empty';e.style.flex=`${rem} 0 22px`;e.textContent=rem+'M свободно';rail.appendChild(e)}outer.appendChild(rail);host.appendChild(outer)});if(lay.overflow.length){const e=document.createElement('div');e.className='panel-message error';e.textContent='НЕ РАЗМЕЩЕНО: '+lay.overflow.map(x=>x.name).join(', ');host.appendChild(e)}}
+        function renderPanelDiagram(){const host=$('panelDiagram');if(!host)return;host.innerHTML='';const st=proSettings();const heading=document.createElement('div');heading.className='panel-message warn';heading.textContent=`Условная однолинейная схема (не монтажная): ввод ${st.phases===3?'L1/L2/L3/N/PE':'L/N/PE'}. PE идёт к нагрузкам через PE-шину, не через автоматы/УЗО. N после каждого УЗО/дифавтомата должен быть раздельным.`;host.appendChild(heading);for(const c of proConnections()){const row=document.createElement('div');row.className='diagram-row';row.style.marginTop='8px';const parts=[`Питание ${c.line.phases===3?'L1/L2/L3/N':c.line.phase+'/N'}`,c.main?`${c.main.name} ${c.main.amp}А`:'Вводной аппарат НЕ ЗАДАН'];if(c.protection)parts.push(`${c.protection.type==='rcbo'?'Дифавтомат':'УЗО'} ${c.protection.amp}А / ${c.protection.ma}мА, тип ${c.protection.rcdType}`);if(c.protection?.type!=='rcbo')parts.push(`Автомат ${c.line.curve}${c.line.breaker??'?'} (${c.line.modules}P)`);parts.push(`${c.line.name} · ${c.line.section??'?'} мм²`);parts.forEach((t,i)=>{if(i){const a=document.createElement('span');a.className='diagram-arrow';a.textContent='→';row.appendChild(a)}const n=document.createElement('div');n.className='diagram-node';n.textContent=t;row.appendChild(n)});host.appendChild(row);const note=document.createElement('p');note.className='hint';note.textContent=`PE → ${c.line.name} (отдельная шина); N → ${c.protection?'через назначенную дифзащиту':'через общую N-шину'}. ${c.problem}`;host.appendChild(note)}}
+        function renderPanelAudit(){const host=$('panelAudit');if(!host)return;host.innerHTML='';const msgs=[],st=proSettings(),lay=proLayout(),connections=proConnections();if(lay.overflow.length)msgs.push(['error',`Переполнение корпуса: не помещается ${lay.overflow.length} устройств.`]);if(lay.used+Math.ceil(lay.used*st.reserve)>lay.capacity)msgs.push(['warn','Корпус не обеспечивает выбранный резерв модулей.']);if(st.z===null)msgs.push(['warn','Импеданс источника не указан: расчёт Iкз, отключающей способности и времени отключения невозможен.']);if(!connections.some(c=>c.main)&&connections.length)msgs.push(['warn','Не задан вводной аппарат.']);for(const c of connections){const x=c.line;if(st.phases===3&&x.phases===1&&!['L1','L2','L3'].includes(x.phase))msgs.push(['error',`${x.name}: выберите фазу L1/L2/L3.`]);if(st.phases===1&&x.phases===3)msgs.push(['error',`${x.name}: трёхфазная линия при однофазном вводе.`]);for(const msg of x.issues||[])msgs.push(['error',`${x.name}: ${msg}`]);if(c.problem)msgs.push(['warn',`${x.name}: ${c.problem}`]);if(x.rcdMode==='none'&&x.wet)msgs.push(['warn',`${x.name}: влажная зона без назначенной дифзащиты.`]);if(c.protection&&c.protection.amp<x.current)msgs.push(['error',`${x.name}: номинал дифзащиты ниже рабочего тока.`]);if(c.protection?.type==='rcbo'&&c.protection.amp!==x.breaker)msgs.push(['warn',`${x.name}: номинал дифавтомата не совпадает с номиналом линии.`]);if(x.ik!==null&&x.ik>x.breaking*1000)msgs.push(['error',`${x.name}: недостаточная отключающая способность.`]);}
+        const rcds=userShieldLines.filter(x=>x.type==='rcd');for(const r of rcds){const group=connections.filter(c=>c.protection?.id===r.id);const sum=group.reduce((a,c)=>a+c.line.current,0);if(group.length&&sum>r.amp)msgs.push(['warn',`${r.name}: сумма токов ${fmt(sum,1)} А выше ${r.amp} А (коэффициент одновременности неизвестен).`])}
+        msgs.push(['warn','Таблица Iz и коэффициенты прокладки/температуры ориентировочные, не нормативная верификация. Нужны тип кабеля, число нагруженных жил, фактическая прокладка, группировка, температура и применимые таблицы.']);msgs.push(['warn','Селективность и автоматическое отключение НЕ подтверждены: нужны кривые и паспортные таблицы аппаратов, параметры сети и измерение петли. Схема не содержит шин, клемм и перемычек монтажного уровня.']);if(!connections.length)msgs.unshift(['','Добавьте отходящие линии.']);for(const [severity,msg] of msgs.filter((m,i,a)=>a.findIndex(n=>n[0]===m[0]&&n[1]===m[1])===i)){const el=document.createElement('div');el.className='panel-message '+severity;el.textContent=msg;host.appendChild(el)}}
+        function renderPanelBOM(){const host=$('panelBOM');if(!host)return;host.innerHTML='';const counts=new Map(),connections=proConnections(),st=proSettings();const add=(key)=>counts.set(key,(counts.get(key)||0)+1);for(const x of userShieldLines){if(x.kind==='line'){const c=connections.find(c=>c.line.id===x.id);if(c?.protection?.type!=='rcbo')add(`Автомат ${x.curve}${x.breaker??'?'} · ${x.modules}P · ${x.breaking}кА · ${x.modules}M`)}else add(`${x.name} · ${x.type} · ${x.amp}А · ${x.poles}P · ${x.modules}M${['rcd','rcbo'].includes(x.type)?' · '+x.ma+'мА тип '+x.rcdType:''}`)}const lay=proLayout(),required=lay.used+Math.ceil(lay.used*st.reserve);const cases=[12,18,24,36,48,54,72,96,108,144];const body=cases.find(x=>x>=required)||`более ${cases.at(-1)}`;add(`Корпус: минимум ${required}M с резервом; типоразмер от ${body}M (проверить геометрию)`);add('N/PE-шины и клеммы: состав определить по монтажной схеме');for(const [key,n] of counts){const row=document.createElement('div');row.className='panel-bom-row';const a=document.createElement('span'),b=document.createElement('span');a.textContent=key;b.textContent=n+' шт.';row.append(a,b);host.appendChild(row)}}
+        function autoDesignPanel(){if(!userShieldLines.some(x=>x.kind==='line'))['light','sockets','kitchen','hob','boiler','washer'].forEach(k=>userShieldLines.push(newPanelLine(k)));const st=proSettings();let main=userShieldLines.find(x=>x.type==='main');if(!main){main=proDevice('main','Вводной выключатель');main.poles=st.phases===3?4:2;main.modules=main.poles;main.amp=63;userShieldLines.unshift(main)}for(const x of userShieldLines.filter(x=>x.kind==='line')){proCalc(x,st);if(x.wet||x.inverter){x.rcdMode='individual';let d=userShieldLines.find(d=>d.type==='rcbo'&&d.protectedId===x.id);if(!d){d=proDevice('rcbo','Дифавтомат: '+x.name);d.protectedId=x.id;userShieldLines.push(d)}d.amp=x.breaker||16;d.poles=x.phases===3?4:2;d.modules=d.poles;d.rcdType='A'}else x.rcdMode='none'}selectedPanelItem=userShieldLines.find(x=>x.kind==='line')?.id||null;rebuildPanel()}
+        function updatePanelLine(id,field,val){const x=userShieldLines.find(y=>y.id===id);if(!x)return;x[field]=val;if(field==='section')x.manualSection=true;if(field==='breaker')x.manualBreaker=true;rebuildPanel()}
+        function exportPanel(){const data={schema:'electrik-pro-panel-v3',rooms:proRooms,savedAt:new Date().toISOString(),settings:{...proSettings()},items:userShieldLines};const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='electrik-pro-panel-v3-1.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+        function importPanel(e){const file=e.target.files?.[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{const d=JSON.parse(reader.result);if(!['electrik-pro-panel-v1','electrik-pro-panel-v2','electrik-pro-panel-v3'].includes(d.schema)||!Array.isArray(d.items)||d.items.length>500)throw Error('Неверный формат/размер проекта');const ids=new Set();const items=d.items.map(x=>{if(!x||typeof x.id!=='string'||ids.has(x.id)||!['line','protection'].includes(x.kind)||typeof x.name!=='string')throw Error('Некорректный элемент проекта');ids.add(x.id);return proNormalize({...x})});userShieldLines=items;proRooms=Array.isArray(d.rooms)?d.rooms.slice(0,100).map(normalizeRoom):[];const s=d.settings||{};for(const [k,id,valid] of [['phases','panel_phases',[1,3]],['rows','panel_rows',[1,2,3,4]],['width','panel_width',[12,18,24,36]],['reserve','panel_reserve',[.1,.2,.25]]])if(valid.includes(Number(s[k])))$(id).value=s[k];for(const [k,id] of [['temp','panel_temp'],['group','panel_group'],['z','panel_z']])if(s[k]!==undefined)$(id).value=s[k]??'';selectedPanelItem=items.find(x=>x.kind==='line')?.id||items[0]?.id||null;rebuildPanel()}catch(err){alert('Не удалось загрузить проект: '+err.message)}e.target.value=''};reader.readAsText(file)}
+
+        function proBalanceProposal(){
+          if(proSettings().phases!==3){alert('Для балансировки нужен трёхфазный ввод.');return;}
+          const lines=userShieldLines.filter(x=>x.kind==='line'&&x.phases===1&&Number.isFinite(x.current));
+          if(!lines.length){alert('Нет однофазных линий для распределения.');return;}
+          const totals={L1:0,L2:0,L3:0};
+          for(const x of userShieldLines.filter(x=>x.kind==='line'&&x.phases===3&&Number.isFinite(x.current)))for(const k of Object.keys(totals))totals[k]+=x.current;
+          const proposal=new Map();
+          for(const x of [...lines].sort((a,b)=>b.current-a.current)){
+            const phase=Object.keys(totals).sort((a,b)=>totals[a]-totals[b])[0];
+            totals[phase]+=x.current;proposal.set(x.id,phase);
+          }
+          const before={L1:0,L2:0,L3:0};for(const x of userShieldLines.filter(x=>x.kind==='line'&&Number.isFinite(x.current))){if(x.phases===3)for(const k of Object.keys(before))before[k]+=x.current;else if(before[x.phase]!==undefined)before[x.phase]+=x.current;}
+          const spread=t=>Math.max(...Object.values(t))-Math.min(...Object.values(t));
+          const detail=[...proposal].map(([id,phase])=>`${userShieldLines.find(x=>x.id===id).name} → ${phase}`).join('\n');
+          if(!confirm(`Предлагаемая балансировка (сумма расчётных токов, без одновременности):\nПерекос ${fmt(spread(before),1)} → ${fmt(spread(totals),1)} А\n\n${detail}\n\nПрименить?`))return;
+          for(const x of lines)x.phase=proposal.get(x.id);rebuildPanel();
+        }
+        // Phase currents are indicative: sum of design currents without diversity or power factor vector summation.
+        function renderPhaseBalance(){const host=$('phaseBalance');if(!host)return;const totals={L1:0,L2:0,L3:0};for(const x of userShieldLines.filter(x=>x.kind==='line')){if(!Number.isFinite(x.current))continue;if(x.phases===3){for(const k of Object.keys(totals))totals[k]+=x.current}else if(totals[x.phase]!==undefined)totals[x.phase]+=x.current}host.replaceChildren();for(const [k,v] of Object.entries(totals)){const d=document.createElement('div');d.className='panel-message';d.textContent=k+': '+fmt(v,1)+' А (сумма расчётных токов)';host.appendChild(d)}const v=Object.values(totals),warn=document.createElement('p');warn.className='hint';warn.textContent='Разница фаз: '+fmt(Math.max(...v)-Math.min(...v),1)+' А. Без коэффициентов одновременности и данных о нейтрали это только ориентир.';host.appendChild(warn);if(proSettings().phases===3){const btn=document.createElement('button');btn.className='line-add-btn secondary';btn.textContent='⚖ Предложить балансировку фаз';btn.onclick=proBalanceProposal;host.appendChild(btn)}}
+        let proRooms=[];
+        function normalizeRoom(r){return {id:String(r.id||panelId()),name:String(r.name||'Комната').slice(0,100),width:Math.max(.1,Number(r.width)||4),height:Math.max(.1,Number(r.height)||4),points:Array.isArray(r.points)?r.points.slice(0,200).map(p=>({id:String(p.id||panelId()),type:['socket','light','switch'].includes(p.type)?p.type:'socket',x:Math.min(100,Math.max(0,Number(p.x)||50)),y:Math.min(100,Math.max(0,Number(p.y)||50)),kw:Math.max(0,Number(p.kw)||0)})):[]}}
+        function addRoom(){proRooms.push(normalizeRoom({name:'Комната '+(proRooms.length+1)}));renderRooms()}
+        function addRoomPoint(id,type){const r=proRooms.find(r=>r.id===id);if(!r)return;r.points.push({id:panelId(),type,x:20+Math.random()*60,y:20+Math.random()*60,kw:type==='socket'?1.5:type==='light'?.15:0});renderRooms()}
+        function roomToPanel(id){const r=proRooms.find(r=>r.id===id);if(!r)return;const power=r.points.reduce((a,p)=>a+p.kw,0);if(!power){alert('Добавьте потребители с мощностью.');return}const line=newPanelLine(r.points.some(p=>p.type==='socket')?'sockets':'light');line.name=r.name+' · линия';line.kw=power;line.length=Math.round(2*(r.width+r.height)+5);line.roomId=r.id;userShieldLines.push(line);selectedPanelItem=line.id;rebuildPanel();switchModule(10)}
+        function renderRooms(){const host=$('roomHost');if(!host)return;host.replaceChildren();for(const r of proRooms){const card=document.createElement('div');card.className='panel-subcard';const title=document.createElement('input');title.value=r.name;title.setAttribute('aria-label','Название помещения');title.onchange=()=>{r.name=title.value;renderRooms()};card.append(title);const sizes=document.createElement('div');sizes.className='grid-2';for(const key of ['width','height']){const inp=document.createElement('input');inp.type='number';inp.min='.1';inp.step='.1';inp.value=r[key];inp.title=key==='width'?'Ширина, м':'Длина, м';inp.onchange=()=>{r[key]=Math.max(.1,Number(inp.value)||.1);renderRooms()};sizes.append(inp)}card.append(sizes);const floor=document.createElement('div');floor.className='room-floor';floor.title='Нажмите на точку, чтобы удалить её';for(const p of r.points){const marker=document.createElement('button');marker.className='room-point';marker.style.left=p.x+'%';marker.style.top=p.y+'%';marker.textContent=p.type==='socket'?'▣':p.type==='light'?'☼':'⌁';marker.title=p.type+' · '+p.kw+' кВт';marker.onclick=()=>{if(confirm('Удалить точку?')){r.points=r.points.filter(x=>x.id!==p.id);renderRooms()}};floor.append(marker)}card.append(floor);const summary=document.createElement('p');summary.className='hint';summary.textContent=`${r.width}×${r.height} м · ${r.points.length} точек · ${fmt(r.points.reduce((a,p)=>a+p.kw,0),2)} кВт. Длина кабеля оценена по периметру, без фактической трассировки.`;card.append(summary);const buttons=document.createElement('div');buttons.className='panel-actions';for(const [label,fn] of [['＋ Розетка',()=>addRoomPoint(r.id,'socket')],['＋ Свет',()=>addRoomPoint(r.id,'light')],['＋ Выключатель',()=>addRoomPoint(r.id,'switch')],['→ В щит',()=>roomToPanel(r.id)],['Удалить',()=>{proRooms=proRooms.filter(x=>x.id!==r.id);renderRooms()}]]){const b=document.createElement('button');b.className='line-add-btn secondary';b.textContent=label;b.onclick=fn;buttons.append(b)}card.append(buttons);host.append(card)}}
+
+        // Красивый управляемый список для номинала автомата (не системное меню браузера).
+        (function initCustomSelect(){
+            const wrap=$('m9_select_wrap'), trigger=$('m9_select_trigger'), menu=$('m9_select_menu'), hidden=$('m9_cb'), value=$('m9_select_value');
+            if(!wrap || !trigger || !menu || !hidden) return;
+            const close=()=>{wrap.classList.remove('open');trigger.setAttribute('aria-expanded','false');};
+            trigger.addEventListener('click',()=>{const open=!wrap.classList.contains('open');wrap.classList.toggle('open',open);trigger.setAttribute('aria-expanded',String(open));});
+            menu.querySelectorAll('.custom-option').forEach(option=>option.addEventListener('click',()=>{
+                hidden.value=option.dataset.value;
+                value.textContent=option.querySelector('.option-main').textContent;
+                menu.querySelectorAll('.custom-option').forEach(o=>{const selected=o===option;o.classList.toggle('selected',selected);o.setAttribute('aria-selected',String(selected));});
+                close();calcM9();
+            }));
+            document.addEventListener('click',e=>{if(!wrap.contains(e.target))close();});
+            document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+        })();
+
+        // Ensure calculator fields are recalculated whenever relevant controls change.
+        document.addEventListener('DOMContentLoaded',()=>{
+            calcM1();calcM2();calcM3();calcM4();calcM5();calcM6();calcM7();calcM8();calcM9();rebuildPanel();
+        });
+        calcM1();calcM2();calcM3();calcM4();calcM5();calcM6();calcM7();calcM8();calcM9();rebuildPanel();
+    </script>
+<section class="pro-extra" id="electricPlus"><h2>Электрик PRO 4.0 · Кабельный журнал и маркировка</h2><p class="pro-warn">Данные берутся из текущих линий щита. Соединения N/PE и клеммников должны проверяться по фактической модели и монтажной схеме; журнал не подтверждает безопасность установки.</p><button id="elRefresh">Обновить журнал</button><button id="elCsv">Экспорт кабельного журнала CSV</button><button id="elSave">Сохранить снимок в Workspace</button><div id="elLog" class="scroll"></div></section><script src="../../assets/electric-plus.js"></script><script src="../../assets/pdf-material-catalog.js"></script><script src="../../assets/material-registry.js"></script><script src="../../assets/material-calculator.js"></script></body>
+</html>

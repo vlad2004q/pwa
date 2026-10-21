@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
+    <title>Belgee Finance — Apple Glass Pro 4.0</title>
+    <meta name="theme-color" content="#0b1329">
+    <link rel="stylesheet" href="../../assets/offline-ui.css">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 50%, #020617 100%);
+            -webkit-tap-highlight-color: transparent;
+        }
+        .apple-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .apple-glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .apple-input {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            transition: all 0.2s ease;
+        }
+        .apple-input:focus {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: #10b981;
+            outline: none;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+        }
+        input[type=range] {
+            -webkit-appearance: none;
+            background: rgba(255, 255, 255, 0.1);
+            height: 6px;
+            border-radius: 3px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: #ffffff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            cursor: pointer;
+        }
+    </style>
+<link rel="stylesheet" href="../../assets/desktop-responsive.css"><script defer src="../../assets/workspace.js"></script><link rel="stylesheet" href="../../assets/pro6.css"><script defer src="../../assets/pro6.js"></script><link rel="stylesheet" href="../../assets/material-calculator.css"><link rel="stylesheet" href="../../assets/pro7.css"><script defer src="../../assets/pro7.js"></script><link rel="stylesheet" href="../../assets/pro-motion.css"><script defer src="../../assets/pro-motion.js"></script><link rel="stylesheet" href="../../assets/pro-results.css"><script defer src="../../assets/pro-results.js"></script><link rel="stylesheet" href="../../assets/pro-elegance.css"><script defer src="../../assets/pro-elegance.js"></script><link rel="stylesheet" href="../../assets/pro-design.css"><link rel="stylesheet" href="../../assets/pro-premium.css"><script defer src="../../assets/pro-premium.js"></script><link rel="stylesheet" href="../../assets/pro-ux.css"><link rel="stylesheet" href="../../assets/ecosystem-unified.css"><link rel="stylesheet" href="../../assets/ecosystem-84.css"><script defer src="../../assets/ecosystem-84.js"></script><link rel="stylesheet" href="../../assets/ecosystem-85.css"><link rel="stylesheet" href="../../assets/ecosystem-86.css"><link rel="stylesheet" href="../../assets/unified-nav.css"><script defer src="../../assets/unified-nav.js"></script><script defer src="../../assets/pro-backup93.js"></script><link rel="stylesheet" href="../../assets/pro99.css">
+</head>
+<body class="text-slate-100 min-h-screen pb-24 select-none"><aside class="pro90-links" style="padding:12px;text-align:center;background:#10243a;color:#eafaff"><a href="../projects/index.html">🏗️ Проекты</a> · <a href="../cutting/index.html">📐 Раскрой</a> · <a href="../analytics/index.html">📊 Аналитика</a></aside><nav class="pro-back"><a href="../../index.html">← Главная / Хаб</a><span>PRO Ecosystem · finance</span><button onclick="history.length>1?history.back():location.assign('../../index.html')">↩ Назад</button></nav>
+
+    <header class="sticky top-0 z-50 apple-glass border-b border-white/10 px-5 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-400/20 to-teal-600/30 border border-white/20 flex items-center justify-center shadow-inner">
+                <span class="text-xl">🚗</span>
+            </div>
+            <div>
+                <h1 class="font-bold text-base tracking-tight text-white leading-tight">Belgee Auto Loan</h1>
+                <p class="text-[11px] font-medium text-emerald-400/90 mt-0.5">iOS Glassmorphism Edition 4.0</p>
+            </div>
+        </div>
+        <span class="text-[10px] font-semibold px-3 py-1 rounded-full bg-white/10 text-slate-300 border border-white/10 backdrop-blur-md">v4.0 Pro</span>
+    </header>
+
+    <main class="pro-desktop pro-finance max-w-md mx-auto px-4 pt-5 space-y-4">
+
+        <div class="apple-glass p-6 rounded-3xl relative overflow-hidden">
+            <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <div class="flex justify-between items-start">
+                <div>
+                    <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest" id="lblGraceTitle">Платеж в грейс-период</span>
+                    <div class="text-3xl font-extrabold text-emerald-400 tracking-tight mt-1" id="lblGracePayment">0.00 BYN</div>
+                </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center">
+                <div>
+                    <div class="text-[11px] text-slate-400" id="lblMainTitle">Основной платеж</div>
+                    <div class="text-xl font-bold text-white mt-0.5" id="lblMainPayment">0.00 BYN</div>
+                </div>
+                <div class="text-right">
+                    <div class="text-[11px] text-slate-400">Переплата</div>
+                    <div class="text-sm font-semibold text-rose-400" id="lblOverpayment">0.00 BYN</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="apple-glass-card p-5 rounded-3xl space-y-4">
+            <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-2">
+                <span>⚙️</span> Режим и Способ погашения
+            </h2>
+
+            <div>
+                <label class="text-[11px] font-medium text-slate-400">Вид кредита</label>
+                <div class="grid grid-cols-2 gap-2 mt-1.5">
+                    <button type="button" id="btnAnnuitet" onclick="setLoanType('annuitet')" class="py-2.5 px-3 rounded-2xl text-xs font-bold bg-emerald-500 text-black border border-emerald-400 shadow-lg">Аннуитетный</button>
+                    <button type="button" id="btnDiff" onclick="setLoanType('diff')" class="py-2.5 px-3 rounded-2xl text-xs font-bold bg-white/5 text-slate-300 border border-white/10">Дифференцированный</button>
+                </div>
+            </div>
+
+            <div>
+                <label class="text-[11px] font-medium text-slate-400">Стратегия платежа</label>
+                <div class="grid grid-cols-2 gap-2 mt-1.5">
+                    <button type="button" id="btnPayStandard" onclick="setPayStrategy('standard')" class="py-2.5 px-3 rounded-2xl text-xs font-bold bg-emerald-500 text-black border border-emerald-400">По графику</button>
+                    <button type="button" id="btnPayCustom" onclick="setPayStrategy('custom')" class="py-2.5 px-3 rounded-2xl text-xs font-bold bg-white/5 text-slate-300 border border-white/10">Своя сумма</button>
+                </div>
+            </div>
+
+            <div id="customPayBlock" class="hidden pt-2">
+                <label class="text-[11px] font-medium text-slate-400">Ваш желаемый ежемесячный платеж (BYN)</label>
+                <input type="number" id="customPayVal" value="1200" step="50" oninput="calc()" class="apple-input w-full mt-1.5 rounded-2xl px-3.5 py-2.5 text-sm font-bold text-emerald-400 text-right">
+            </div>
+        </div>
+
+        <div class="apple-glass-card p-5 rounded-3xl space-y-4">
+            <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-2">
+                <span>💰</span> Параметры кредита
+            </h2>
+
+            <div>
+                <label class="text-[11px] font-medium text-slate-400">Сумма кредита (BYN)</label>
+                <input type="number" id="directLoan" value="41250" step="500" oninput="onDirectLoanInput()" class="apple-input w-full mt-1.5 rounded-2xl px-3.5 py-2.5 text-base font-bold text-emerald-400 text-right">
+            </div>
+
+            <div class="border-t border-white/5 pt-3 space-y-3">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-[11px] font-medium text-slate-400">Стоимость авто (BYN)</label>
+                        <input type="number" id="carPrice" value="55000" step="1000" oninput="onCarCalcInput()" class="apple-input w-full mt-1 rounded-2xl px-3 py-2 text-xs font-bold text-right">
+                    </div>
+                    <div>
+                        <label class="text-[11px] font-medium text-slate-400">Аванс (%)</label>
+                        <input type="number" id="downPctNum" value="25" min="0" max="90" step="1" oninput="onDownPctInput()" class="apple-input w-full mt-1 rounded-2xl px-3 py-2 text-xs font-bold text-right">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-[11px] font-medium text-slate-400 mb-1">
+                        <span>Ползунок аванса</span>
+                        <span id="lblDownVal" class="text-emerald-400 font-bold">25% (13 750 BYN)</span>
+                    </div>
+                    <input type="range" id="downPct" min="10" max="80" value="25" step="5" oninput="onSliderInput()" class="w-full">
+                </div>
+            </div>
+        </div>
+
+        <div class="apple-glass-card p-5 rounded-3xl space-y-4">
+            <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-2">
+                <span>📊</span> Ставки и Срок
+            </h2>
+
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label class="text-[11px] font-medium text-slate-400">Льготная ставка (%)</label>
+                    <input type="number" id="graceRate" value="7.25" step="0.25" oninput="calc()" class="apple-input w-full mt-1.5 rounded-2xl px-3.5 py-2.5 text-sm font-bold text-right">
+                </div>
+                <div>
+                    <label class="text-[11px] font-medium text-slate-400">Грейс-период (мес)</label>
+                    <input type="number" id="graceMonths" value="24" step="6" oninput="calc()" class="apple-input w-full mt-1.5 rounded-2xl px-3.5 py-2.5 text-sm font-bold text-right">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label class="text-[11px] font-medium text-slate-400">Основная ставка (%)</label>
+                    <input type="number" id="mainRate" value="16.5" step="0.25" oninput="calc()" class="apple-input w-full mt-1.5 rounded-2xl px-3.5 py-2.5 text-sm font-bold text-right">
+                </div>
+                <div>
+                    <label class="text-[11px] font-medium text-slate-400">Срок кредита (лет)</label>
+                    <select id="loanYears" onchange="calc()" class="apple-input w-full mt-1.5 rounded-2xl px-3 py-2.5 text-xs font-bold bg-slate-900">
+                        <option value="3">3 года</option>
+                        <option value="5">5 лет</option>
+                        <option value="7" selected>7 лет</option>
+                        <option value="10">10 лет</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="apple-glass-card p-5 rounded-3xl space-y-3">
+            <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-2">
+                <span>📈</span> График остатка долга и платежей
+            </h2>
+            <div class="relative w-full h-44 pt-2">
+                <canvas id="loanChart" class="w-full h-full"></canvas>
+            </div>
+            <div class="flex justify-between text-[10px] text-slate-400 px-1 pt-1">
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span> Платеж</span>
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-sky-400 inline-block"></span> Остаток долга</span>
+            </div>
+        </div>
+
+        <div class="apple-glass-card p-5 rounded-3xl space-y-3">
+            <div class="flex justify-between items-center">
+                <h3 class="text-xs font-bold text-slate-300 uppercase tracking-widest">📋 График платежей (помесячный)</h3>
+                <button onclick="copySchedule()" class="text-[10px] font-bold px-2.5 py-1 rounded-lg bg-white/10 text-emerald-400 hover:bg-white/20 transition">Скопировать</button>
+            </div>
+            <div class="max-h-60 overflow-y-auto rounded-2xl border border-white/5 bg-slate-950/40 p-2 space-y-1 text-xs">
+                <div class="grid grid-cols-4 font-bold text-slate-400 pb-1.5 border-b border-white/10 text-[10px] px-1">
+                    <span>№</span>
+                    <span>Платеж</span>
+                    <span>Проценты</span>
+                    <span class="text-right">Остаток</span>
+                </div>
+                <div id="scheduleRows" class="space-y-1 divide-y divide-white/5"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        let currentType = 'annuitet';
+        let currentStrategy = 'standard';
+        let scheduleData = [];
+
+        function setLoanType(type) {
+            currentType = type;
+            document.getElementById('btnAnnuitet').className = type === 'annuitet' 
+                ? 'py-2.5 px-3 rounded-2xl text-xs font-bold bg-emerald-500 text-black border border-emerald-400 shadow-lg'
+                : 'py-2.5 px-3 rounded-2xl text-xs font-bold bg-white/5 text-slate-300 border border-white/10';
+            document.getElementById('btnDiff').className = type === 'diff' 
+                ? 'py-2.5 px-3 rounded-2xl text-xs font-bold bg-emerald-500 text-black border border-emerald-400 shadow-lg'
+                : 'py-2.5 px-3 rounded-2xl text-xs font-bold bg-white/5 text-slate-300 border border-white/10';
+            calc();
+        }
+
+        function setPayStrategy(strat) {
+            currentStrategy = strat;
+            document.getElementById('btnPayStandard').className = strat === 'standard' 
+                ? 'py-2.5 px-3 rounded-2xl text-xs font-bold bg-emerald-500 text-black border border-emerald-400'
+                : 'py-2.5 px-3 rounded-2xl text-xs font-bold bg-white/5 text-slate-300 border border-white/10';
+            document.getElementById('btnPayCustom').className = strat === 'custom' 
+                ? 'py-2.5 px-3 rounded-2xl text-xs font-bold bg-emerald-500 text-black border border-emerald-400'
+                : 'py-2.5 px-3 rounded-2xl text-xs font-bold bg-white/5 text-slate-300 border border-white/10';
+            
+            document.getElementById('customPayBlock').classList.toggle('hidden', strat !== 'custom');
+            calc();
+        }
+
+        function onDirectLoanInput() {
+            const carPrice = parseFloat(document.getElementById('carPrice').value) || 0;
+            const directLoan = parseFloat(document.getElementById('directLoan').value) || 0;
+            if (carPrice > 0) {
+                const downBYN = Math.max(0, carPrice - directLoan);
+                const pct = Math.min(100, Math.max(0, (downBYN / carPrice) * 100));
+                document.getElementById('downPctNum').value = Math.round(pct);
+                document.getElementById('downPct').value = Math.round(pct);
+            }
+            calc();
+        }
+
+        function onCarCalcInput() {
+            syncFromCarAndPct();
+            calc();
+        }
+
+        function onDownPctInput() {
+            const pct = parseFloat(document.getElementById('downPctNum').value) || 0;
+            document.getElementById('downPct').value = pct;
+            syncFromCarAndPct();
+            calc();
+        }
+
+        function onSliderInput() {
+            const pct = parseFloat(document.getElementById('downPct').value) || 0;
+            document.getElementById('downPctNum').value = pct;
+            syncFromCarAndPct();
+            calc();
+        }
+
+        function syncFromCarAndPct() {
+            const carPrice = parseFloat(document.getElementById('carPrice').value) || 0;
+            const downPct = parseFloat(document.getElementById('downPct').value) || 0;
+            const downBYN = carPrice * (downPct / 100);
+            const loanSum = Math.max(0, carPrice - downBYN);
+            document.getElementById('directLoan').value = Math.round(loanSum);
+        }
+
+        function calc() {
+            const carPrice = parseFloat(document.getElementById('carPrice').value) || 0;
+            const loanSum = parseFloat(document.getElementById('directLoan').value) || 0;
+            const downPct = parseFloat(document.getElementById('downPct').value) || 0;
+
+            const graceRate = (parseFloat(document.getElementById('graceRate').value) || 0) / 100;
+            const mainRate = (parseFloat(document.getElementById('mainRate').value) || 0) / 100;
+            const graceMonths = parseInt(document.getElementById('graceMonths').value) || 0;
+            const loanYears = parseInt(document.getElementById('loanYears').value) || 7;
+            const totalMonths = loanYears * 12;
+
+            const customPay = parseFloat(document.getElementById('customPayVal').value) || 0;
+
+            const downBYN = Math.max(0, carPrice - loanSum);
+            document.getElementById('lblDownVal').innerText = Math.round(downPct) + '% (' + Math.round(downBYN).toLocaleString('ru-RU') + ' BYN)';
+
+            scheduleData = [];
+            let balance = loanSum;
+            let totalInterest = 0;
+            let firstGracePayment = 0;
+            let firstMainPayment = 0;
+
+            for (let m = 1; m <= totalMonths; m++) {
+                if (balance <= 0) break;
+
+                const currentRate = (m <= graceMonths) ? graceRate : mainRate;
+                const interest = balance * (currentRate / 12);
+
+                let payment = 0;
+                if (currentType === 'annuitet') {
+                    const remMonths = totalMonths - m + 1;
+                    const mRate = currentRate / 12;
+                    payment = balance * (mRate * Math.pow(1 + mRate, remMonths)) / (Math.pow(1 + mRate, remMonths) - 1);
+                } else {
+                    const remMonths = totalMonths - m + 1;
+                    const principalPart = balance / remMonths;
+                    payment = principalPart + interest;
+                }
+
+                if (currentStrategy === 'custom' && customPay > payment) {
+                    payment = customPay;
+                }
+
+                if (m === 1) firstGracePayment = payment;
+                if (m === graceMonths + 1) firstMainPayment = payment;
+
+                let principal = payment - interest;
+                if (principal > balance) {
+                    principal = balance;
+                    payment = principal + interest;
+                }
+
+                balance -= principal;
+                totalInterest += interest;
+
+                scheduleData.push({
+                    month: m,
+                    payment: payment,
+                    interest: interest,
+                    principal: principal,
+                    balance: Math.max(0, balance)
+                });
+            }
+
+            if (firstMainPayment === 0 && scheduleData.length > graceMonths) {
+                firstMainPayment = scheduleData[graceMonths] ? scheduleData[graceMonths].payment : 0;
+            }
+
+            document.getElementById('lblGracePayment').innerText = firstGracePayment.toFixed(2) + ' BYN';
+            document.getElementById('lblMainPayment').innerText = (firstMainPayment || firstGracePayment).toFixed(2) + ' BYN';
+            document.getElementById('lblOverpayment').innerText = totalInterest.toFixed(2) + ' BYN';
+
+            if (currentType === 'diff') {
+                document.getElementById('lblGraceTitle').innerText = 'Первый платеж (грейс)';
+                document.getElementById('lblMainTitle').innerText = 'Первый основной платеж';
+            } else {
+                document.getElementById('lblGraceTitle').innerText = 'Платеж в грейс-период';
+                document.getElementById('lblMainTitle').innerText = 'Основной платеж';
+            }
+
+            renderSchedule();
+            renderChart();
+        }
+
+        function renderSchedule() {
+            const container = document.getElementById('scheduleRows');
+            container.innerHTML = '';
+            scheduleData.forEach(row => {
+                const div = document.createElement('div');
+                div.className = 'grid grid-cols-4 py-1 text-[11px] text-slate-300 hover:bg-white/5 rounded px-1 transition';
+                div.innerHTML = `
+                    <span class="font-bold text-slate-400">#${row.month}</span>
+                    <span class="font-semibold text-emerald-400">${row.payment.toFixed(0)}</span>
+                    <span class="text-rose-300">${row.interest.toFixed(0)}</span>
+                    <span class="text-right text-slate-400">${row.balance.toFixed(0)}</span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function renderChart() {
+            const canvas = document.getElementById('loanChart');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const dpr = window.devicePixelRatio || 1;
+
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+
+            const w = rect.width;
+            const h = rect.height;
+
+            ctx.clearRect(0, 0, w, h);
+
+            if (scheduleData.length === 0) return;
+
+            const maxBal = Math.max(...scheduleData.map(d => d.balance), 1);
+            const maxPay = Math.max(...scheduleData.map(d => d.payment), 1);
+
+            ctx.beginPath();
+            ctx.strokeStyle = '#38bdf8';
+            ctx.lineWidth = 2;
+            scheduleData.forEach((d, i) => {
+                const x = (i / (scheduleData.length - 1)) * w;
+                const y = h - (d.balance / maxBal) * (h - 20) - 10;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+
+            const barW = Math.max(1, (w / scheduleData.length) - 1);
+            scheduleData.forEach((d, i) => {
+                const x = (i / scheduleData.length) * w;
+                const barH = (d.payment / maxPay) * (h - 30);
+                ctx.fillStyle = 'rgba(16, 185, 129, 0.4)';
+                ctx.fillRect(x, h - barH, barW, barH);
+            });
+        }
+
+        function copySchedule() {
+            let text = '№\tПлатеж (BYN)\tПроценты\tОстаток\n';
+            scheduleData.forEach(r => {
+                text += `${r.month}\t${r.payment.toFixed(2)}\t${r.interest.toFixed(2)}\t${r.balance.toFixed(2)}\n`;
+            });
+            navigator.clipboard.writeText(text);
+            alert('График платежей скопирован в буфер обмена!');
+        }
+
+        calc();
+    </script>
+<section class="pro-extra" id="financePlus"><h2>Finance 2.0 · Сценарии и стоимость владения</h2><p class="pro-warn">Независимый расчёт с помесячными ставками. Реальные банковские графики, комиссии и даты могут отличаться.</p><div class="grid grid-cols-2 gap-3"><label>Название сценария<input id="fpName" value="Предложение A"></label><label>Ежемесячный досрочный платёж, BYN<input type="number" id="fpExtra" value="0" min="0"></label><label>Разовый досрочный платёж, BYN<input type="number" id="fpOnce" value="0" min="0"></label><label>Месяц разового платежа<input type="number" id="fpMonth" value="12" min="1"></label><label>Стратегия<select id="fpMode"><option value="term">Сократить срок</option><option value="payment">Уменьшить платёж</option></select></label><label>Страховка в год, BYN<input type="number" id="fpInsurance" value="0" min="0"></label><label>ТО и налоги в год, BYN<input type="number" id="fpService" value="0" min="0"></label><label>Топливо в месяц, BYN<input type="number" id="fpFuel" value="0" min="0"></label></div><button id="fpAdd">Рассчитать и сохранить сценарий</button><button id="fpExport">Экспорт сравнения JSON</button><div id="fpResults" class="scroll"></div></section><script src="../../assets/finance-plus.js"></script><script src="../../assets/pdf-material-catalog.js"></script><script src="../../assets/material-registry.js"></script><script src="../../assets/material-calculator.js"></script></body>
+</html>
