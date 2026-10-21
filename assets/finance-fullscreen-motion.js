@@ -1,1 +1,0 @@
-/* Fullscreen overlay disabled: interface animations remain local to controls. */

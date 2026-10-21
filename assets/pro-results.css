@@ -1,6 +1,0 @@
-/* PRO 7.4: results feedback without altering numerical calculations */
-.pro74-value-update{animation:pro74-result-pulse 520ms cubic-bezier(.2,.8,.2,1)}
-@keyframes pro74-result-pulse{0%{filter:brightness(1);transform:scale(1)}35%{filter:brightness(1.35);transform:scale(1.035)}100%{filter:brightness(1);transform:scale(1)}}
-.pro74-counting{color:transparent!important}
-.pro74-animated-number{position:absolute;inset:0;white-space:nowrap;pointer-events:none;display:block}
-@media(prefers-reduced-motion:reduce){.pro74-value-update{animation:none!important}}
