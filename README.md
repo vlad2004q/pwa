@@ -60,3 +60,10 @@
 
 ## Касса PRO: мультивалютный пересчёт
 Подсчёт номиналов BYN, RUB, USD, EUR, PLN, UAH, GBP и CHF; автоматический итог, ручные курсы, сохранение истории, экспорт CSV/JSON. Курсы не загружаются из сети. Данные хранятся локально в браузере.
+
+
+## 9.3
+See AUDIT_9_3.md. Unified navigation refinements, fullscreen animation disabled, and backup/import of PRO localStorage and workspace records.
+
+## Проверка 9.6
+Запустите `python qa/check.py` и `node qa/regression.js`. Результаты и ограничения — в `CHANGELOG_9_6.md`.

@@ -1,11 +1,1 @@
-/* Full viewport response for credit calculator controls */
-#pro-loan-motion{position:fixed;inset:0;z-index:2147483640;pointer-events:none;overflow:hidden;display:grid;place-items:center;opacity:0;visibility:hidden}
-#pro-loan-motion.active{visibility:visible;animation:proLoanOverlay .72s ease-out both}
-#pro-loan-motion .pro-loan-halo{position:absolute;width:140vmax;height:140vmax;border-radius:50%;background:radial-gradient(circle,rgba(52,211,153,.19) 0%,rgba(16,185,129,.10) 26%,transparent 63%);transform:scale(.12);animation:proLoanPulse .72s cubic-bezier(.2,.7,.2,1) both}
-#pro-loan-motion .pro-loan-ring{position:absolute;width:min(75vw,75vh);aspect-ratio:1;border:2px solid rgba(110,231,183,.58);border-radius:50%;animation:proLoanRing .72s ease-out both}
-#pro-loan-motion .pro-loan-symbol{font-size:clamp(52px,12vw,120px);color:#a7f3d0;text-shadow:0 0 50px rgba(52,211,153,.65);animation:proLoanSymbol .72s ease-out both}
-@keyframes proLoanOverlay{0%{opacity:0}18%{opacity:1}72%{opacity:1}100%{opacity:0}}
-@keyframes proLoanPulse{0%{transform:scale(.05)}100%{transform:scale(1)}}
-@keyframes proLoanRing{0%{transform:scale(.1);opacity:1}100%{transform:scale(2.2);opacity:0}}
-@keyframes proLoanSymbol{0%{transform:scale(.5);opacity:0}35%{transform:scale(1.1);opacity:1}100%{transform:scale(1.25);opacity:0}}
-@media(prefers-reduced-motion:reduce){#pro-loan-motion,#pro-loan-motion *{animation:none!important}#pro-loan-motion.active{opacity:.18;visibility:visible}}
+#pro-loan-motion{display:none!important}
